@@ -2,11 +2,13 @@ header {
   padding: 1.5rem;
   background-color: rgba(0, 0, 0, 0.4);
   color: #f4fffd;
+  font-family: "Work Sans", sans-serif;
 }
 
 .loginForm {
   margin: 4rem 2rem 2rem 2rem;
   color: #f4fffd;
+  font-family: "Work Sans", sans-serif;
 }
 
 .loginForm .header {
@@ -50,6 +52,7 @@ header {
   padding: 1rem;
   background-color: #2d3047;
   color: #f4fffd;
+  font-family: "Work Sans", sans-serif;
 }
 
 * {
@@ -64,7 +67,6 @@ html {
 }
 
 body {
-  min-width: 15rem;
   background-image: url("../images/van_md.jpg");
   background-size: cover;
   background-position: center;
