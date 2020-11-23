@@ -1,13 +1,13 @@
 import "./css/styles.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import LoginForm from "./components/LoginForm";
+import Home from "./components/Home";
 
 function App() {
   return (
     <>
       <Header />
-      <LoginForm />
+      <Home />
       <Footer />
     </>
   );
