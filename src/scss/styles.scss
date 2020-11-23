@@ -1,6 +1,10 @@
 @import "_variables";
 @import "_mixins";
 
+@import "_header";
+@import "_loginForm";
+@import "_footer";
+
 * {
   margin: 0;
   padding: 0;
@@ -9,4 +13,12 @@
 
 html {
   font-size: 100%;
+}
+
+body {
+  background-image: url("../images/van_md.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
 }
