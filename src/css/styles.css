@@ -4,9 +4,7 @@ header {
 }
 
 .loginForm {
-  max-width: 20rem;
-  margin-top: 5rem;
-  margin-left: 2rem;
+  margin: 4rem 2rem 2rem 2rem;
 }
 
 .loginForm .header {
@@ -63,6 +61,7 @@ html {
 }
 
 body {
+  min-width: 15rem;
   background-image: url("../images/van_md.jpg");
   background-size: cover;
   background-position: center;
