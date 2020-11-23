@@ -4,9 +4,9 @@ const LoginForm = () => {
   return (
     <section className="loginForm">
       <div className=" container row">
-        <div className="col-sm-12 col-md-8 col-lg-4">
+        <div className="col-sm-12 col-md-8 col-lg-5">
           <div className="header">
-            <h2>Login/Register</h2>
+            <h2 className="h4">Login/Register</h2>
           </div>
           <form className="form">
             <label htmlFor="email"></label>
