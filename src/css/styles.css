@@ -68,6 +68,7 @@ html {
 }
 
 body {
+  background-image: url("../images/van_md.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
