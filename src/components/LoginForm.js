@@ -20,7 +20,7 @@ const LoginForm = () => {
     <section className="loginForm">
       <div className=" container row">
         <div className="col-sm-12 col-md-8 col-lg-5">
-          <div className="header">
+          <div className="head">
             <div>
               <button
                 className={`login ${login && "selected"}`}
