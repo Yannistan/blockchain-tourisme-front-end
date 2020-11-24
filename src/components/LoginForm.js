@@ -22,12 +22,18 @@ const LoginForm = () => {
         <div className="col-sm-12 col-md-8 col-lg-5">
           <div className="header">
             <div>
-              <button className="login" onClick={handleLoginClick}>
+              <button
+                className={`login ${login && "selected"}`}
+                onClick={handleLoginClick}
+              >
                 Login
               </button>
             </div>
             <div>
-              <button className="register" onClick={handleRegisterClick}>
+              <button
+                className={`register ${register && "selected"}`}
+                onClick={handleRegisterClick}
+              >
                 Register
               </button>
             </div>

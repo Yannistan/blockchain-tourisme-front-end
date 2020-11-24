@@ -13,8 +13,8 @@
       border: none;
       color: $white;
     }
-    .transparentBg {
-      background-color: $transparentBlack;
+    .selected {
+      text-decoration: underline;
     }
   }
   .form {
@@ -23,7 +23,7 @@
     padding: 1rem;
     legend {
       color: $white;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-style: italic;
     }
     input {

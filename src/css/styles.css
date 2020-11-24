@@ -28,8 +28,8 @@ header {
   color: #f4fffd;
 }
 
-.loginForm .header .transparentBg {
-  background-color: rgba(0, 0, 0, 0.4);
+.loginForm .header .selected {
+  text-decoration: underline;
 }
 
 .loginForm .form {
@@ -40,7 +40,7 @@ header {
 
 .loginForm .form legend {
   color: #f4fffd;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-style: italic;
 }
 
