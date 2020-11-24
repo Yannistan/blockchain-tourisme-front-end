@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { IsLoggedInContext } from "../context/IsLoggedInContext";
 
 const Header = () => {
+  const { isLoggedIn } = useContext(IsLoggedInContext);
+  console.log("isLoggedIn", isLoggedIn);
+
   return (
     <>
       <header>

@@ -14,7 +14,7 @@ const LoginForm = () => {
     setLogIn(false);
   };
 
-  console.log("login :", login, "register :", register);
+  // console.log("login :", login, "register :", register);
 
   return (
     <section className="loginForm">

@@ -1,14 +1,19 @@
-import "./css/styles.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 
+import IsLoggedInContextProvider from "./context/IsLoggedInContext";
+
+import "./css/styles.css";
+
 function App() {
   return (
     <>
-      <Header />
-      <Home />
-      <Footer />
+      <IsLoggedInContextProvider>
+        <Header />
+        <Home />
+        <Footer />
+      </IsLoggedInContextProvider>
     </>
   );
 }
