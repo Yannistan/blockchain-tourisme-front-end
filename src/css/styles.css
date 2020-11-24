@@ -3,6 +3,30 @@ header {
   background-color: rgba(0, 0, 0, 0.4);
   color: #f4fffd;
   font-family: "Work Sans", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav a {
+  margin: 0 2rem 0 1rem;
+  text-decoration: none;
+  color: #f4fffd;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  color: #dd7104;
+}
+
+nav a:hover:nth-child(2) {
+  color: #ed217c;
 }
 
 .loginForm {

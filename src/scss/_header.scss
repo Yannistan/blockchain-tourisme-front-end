@@ -3,4 +3,22 @@ header {
   background-color: $transparentBlack;
   color: $white;
   font-family: $mainFont;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  a {
+    margin: 0 2rem 0 1rem;
+    text-decoration: none;
+    color: $white;
+    font-size: 1.2rem;
+    &:hover {
+      color: $orange;
+    }
+    &:hover:nth-child(2) {
+      color: $red;
+    }
+  }
 }
