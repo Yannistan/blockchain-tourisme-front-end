@@ -1,11 +1,18 @@
 header {
   padding: 1.5rem;
   background-color: $transparentBlack;
-  color: $white;
-  font-family: $mainFont;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  a {
+    font-family: $mainFont;
+    color: $white;
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
 }
 
 nav {

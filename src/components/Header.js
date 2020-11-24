@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import { IsLoggedInContext } from "../context/IsLoggedInContext";
 
@@ -9,10 +10,12 @@ const Header = () => {
   return (
     <>
       <header>
-        <h1 className="h2">Name of App</h1>
+        <h1 className="h2">
+          <Link to="/">Name of App</Link>
+        </h1>
         <nav>
-          <a href="/">Travels</a>
-          <a href="/">Account</a>
+          <Link to="/travels">Travels</Link>
+          <Link to="/account">Account</Link>
         </nav>
       </header>
     </>

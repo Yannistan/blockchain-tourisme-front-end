@@ -1,8 +1,6 @@
 header {
   padding: 1.5rem;
   background-color: rgba(0, 0, 0, 0.4);
-  color: #f4fffd;
-  font-family: "Work Sans", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,6 +10,17 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+header a {
+  font-family: "Work Sans", sans-serif;
+  color: #f4fffd;
+  text-decoration: none;
+  color: #f4fffd;
+}
+
+header a:hover {
+  color: #f4fffd;
 }
 
 nav a {
