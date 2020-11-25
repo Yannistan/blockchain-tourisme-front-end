@@ -136,6 +136,23 @@ nav a:hover:nth-child(2) {
   height: auto;
 }
 
+.reservation .title {
+  margin: 4rem 2rem 2rem 2rem;
+  color: #f4fffd;
+  font-family: "Work Sans", sans-serif;
+  background-color: #2d3047;
+  display: inline-block;
+  padding: 1rem;
+}
+
+.reservation .secondaryTitle {
+  display: inline-block;
+  margin-left: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #f4fffd;
+}
+
 * {
   margin: 0;
   padding: 0;

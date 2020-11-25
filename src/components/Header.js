@@ -14,8 +14,8 @@ const Header = () => {
           <Link to="/">Name of App</Link>
         </h1>
         <nav>
+          <Link to="/reservation">Reservation</Link>
           <Link to="/travels">Travels</Link>
-          <Link to="/account">Account</Link>
         </nav>
       </header>
     </>
