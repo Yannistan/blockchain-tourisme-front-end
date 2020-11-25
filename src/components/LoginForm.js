@@ -39,12 +39,13 @@ const LoginForm = () => {
             </div>
           </div>
           <form className="form">
+            {/*onSubmit={HandleLoginSubmit}*/}
             <legend>{login ? "Login" : "Register"}</legend>
             <label htmlFor="email"></label>
             <input
               type="text"
               id="email"
-              email="email"
+              name="email"
               required
               placeholder="Email"
             />
@@ -52,7 +53,7 @@ const LoginForm = () => {
             <input
               type="text"
               id="password"
-              email="password"
+              name="password"
               required
               placeholder="Password"
             />
