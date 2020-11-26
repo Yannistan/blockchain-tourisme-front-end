@@ -42,21 +42,17 @@ function Dapp() {
 
   return (
     <>
-      {web3State.chain_id === 4 && (
-        <>
-          <Router>
-            <IsLoggedInContextProvider>
-              <Header />
-              <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/reservation" exact component={Reservation} />
-                <Route path="/travels" exact component={Travels} />
-              </Switch>
-              <Footer />
-            </IsLoggedInContextProvider>
-          </Router>
-        </>
-      )}
+      <Router>
+        <IsLoggedInContextProvider>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/reservation" exact component={Reservation} />
+            <Route path="/travels" exact component={Travels} />
+          </Switch>
+          <Footer />
+        </IsLoggedInContextProvider>
+      </Router>
     </>
   );
 }

@@ -282,6 +282,12 @@ nav a:hover:nth-child(2) {
   background-color: #1b998b;
 }
 
+.web3container .connectWeb3 {
+  background-color: #fffd82;
+  color: #2d3047;
+  font-size: 1rem;
+}
+
 .web3container .hide {
   display: none;
 }
