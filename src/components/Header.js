@@ -13,7 +13,7 @@ const Header = () => {
     <>
       <header>
         <h1 className="h2 logo">
-          <Link to="/">Btravel</Link>
+          <Link to="/">B×travel</Link>
           <span>
             <img className="logoIcon" src={PlaneIcon} alt="Btrip logo"></img>
           </span>
