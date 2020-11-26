@@ -1,4 +1,4 @@
-#### This project is using SCSS. Please install `Live SASS Compiler` VSC extension and run `Watch SASS` to compile.
+#### If you need to modify SCSS files please install `Live SASS Compiler` VSC extension and run `Watch SASS` to compile.
 
 #### Packages used :
 
