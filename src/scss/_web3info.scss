@@ -1,0 +1,45 @@
+.web3container {
+  display: inline-block;
+  .showInfoBtn,
+  .connectWeb3 {
+    margin: 0.5rem 0 2rem 3rem;
+    padding: 0.5rem;
+    background: $black;
+    border: none;
+    color: $white;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    &:hover {
+      background-color: $green;
+    }
+  }
+  .hide {
+    display: none;
+  }
+  .web3info {
+    color: $white;
+    background-color: $transparentBlack;
+    padding: 2rem;
+    margin-left: 3rem;
+    margin-bottom: 10rem;
+    font-size: 12px;
+    div {
+      display: flex;
+      align-items: center;
+      p {
+        text-transform: uppercase;
+      }
+      button {
+        color: $white;
+        margin-left: auto;
+        margin-bottom: 1rem;
+        background: none;
+        border: 1px solid $white;
+        border-radius: 5px;
+        padding: 0 3px 0 3px;
+        font-size: 1rem;
+      }
+    }
+  }
+}
