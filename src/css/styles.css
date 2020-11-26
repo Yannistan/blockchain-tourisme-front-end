@@ -1,5 +1,5 @@
 header {
-  padding: 1.5rem;
+  padding: 1rem;
   background-color: rgba(0, 0, 0, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,6 +10,23 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+header .logo a {
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+header .logo a:hover {
+  color: #ed217c;
+}
+
+header .logoIcon {
+  width: 3rem;
+  margin: 0 0 0.5rem 1rem;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 header a {

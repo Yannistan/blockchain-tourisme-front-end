@@ -1,9 +1,23 @@
 header {
-  padding: 1.5rem;
+  padding: 1rem;
   background-color: $transparentBlack;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .logo a {
+    font-family: $logoFont;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+
+    &:hover {
+      color: $red;
+    }
+  }
+  .logoIcon {
+    width: 3rem;
+    margin: 0 0 0.5rem 1rem;
+    filter: invert(1);
+  }
   a {
     font-family: $mainFont;
     color: $white;

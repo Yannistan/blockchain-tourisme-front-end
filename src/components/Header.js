@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { IsLoggedInContext } from "../context/IsLoggedInContext";
 
-import Logo from "../images/logo.png";
+import PlaneIcon from "../images/airplane_wh.png";
 
 const Header = () => {
   const { isLoggedIn } = useContext(IsLoggedInContext);
@@ -12,8 +12,11 @@ const Header = () => {
   return (
     <>
       <header>
-        <h1 className="h2">
-          <Link to="/">Name of App</Link>
+        <h1 className="h2 logo">
+          <Link to="/">Btrip</Link>
+          <span>
+            <img className="logoIcon" src={PlaneIcon} alt="Btrip logo"></img>
+          </span>
         </h1>
         {/*<img src={Logo} alt="..."></img>*/}
         <nav>
