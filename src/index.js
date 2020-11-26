@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "bootstrap/dist/css/bootstrap.css";
-
+import { ChakraProvider, theme } from "@chakra-ui/core";
+import "focus-visible/dist/focus-visible";
+import { Web3Provider } from "./hooks/useWeb3";
+import App from "./App";
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Web3Provider>
+      <App />
+    </Web3Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
