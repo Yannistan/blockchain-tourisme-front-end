@@ -8,11 +8,7 @@ const Web3Info = () => {
   return (
     <>
       <div className="web3container">
-        {!web3State.is_logged ? (
-          <button className="connectWeb3" onClick={login}>
-            Connect Web 3
-          </button>
-        ) : (
+        {web3State.is_logged && (
           <button
             className={`showInfoBtn ${showInfo && "hide"}`}
             onClick={() => setShowInfo(!showInfo)}

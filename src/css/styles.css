@@ -55,6 +55,33 @@ nav a:hover:nth-child(2) {
   color: #ed217c;
 }
 
+.connectWeb3P {
+  margin: 4rem 0 0 3rem;
+  color: #2d3047;
+  border: 1px solid #fffd82;
+  font-size: 1.3rem;
+  font-family: "Work Sans", sans-serif;
+  -webkit-box-shadow: 0 0 15px;
+          box-shadow: 0 0 15px;
+  display: inline-block;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.connectWeb3P .connectWeb3Btn {
+  font-style: italic;
+  background-color: transparent;
+  color: #2d3047;
+  border: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.connectWeb3P .connectWeb3Btn:hover {
+  color: #fffd82;
+}
+
 .loginForm {
   margin: 4rem 2rem 2rem 2rem;
   color: #f4fffd;
@@ -120,6 +147,10 @@ nav a:hover:nth-child(2) {
 
 .loginForm .form button:hover {
   background-color: #dd7104;
+}
+
+.temp {
+  margin-top: 5rem;
 }
 
 .footer {
@@ -265,8 +296,7 @@ nav a:hover:nth-child(2) {
   display: inline-block;
 }
 
-.web3container .showInfoBtn,
-.web3container .connectWeb3 {
+.web3container .showInfoBtn {
   margin: 0.5rem 0 2rem 3rem;
   padding: 0.5rem;
   background: #2d3047;
@@ -277,15 +307,8 @@ nav a:hover:nth-child(2) {
   border-radius: 3px;
 }
 
-.web3container .showInfoBtn:hover,
-.web3container .connectWeb3:hover {
+.web3container .showInfoBtn:hover {
   background-color: #1b998b;
-}
-
-.web3container .connectWeb3 {
-  background-color: #fffd82;
-  color: #2d3047;
-  font-size: 1rem;
 }
 
 .web3container .hide {

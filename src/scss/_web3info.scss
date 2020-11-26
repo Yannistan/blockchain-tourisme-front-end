@@ -1,7 +1,6 @@
 .web3container {
   display: inline-block;
-  .showInfoBtn,
-  .connectWeb3 {
+  .showInfoBtn {
     margin: 0.5rem 0 2rem 3rem;
     padding: 0.5rem;
     background: $black;
@@ -14,11 +13,7 @@
       background-color: $green;
     }
   }
-  .connectWeb3 {
-    background-color: $yellow;
-    color: $black;
-    font-size: 1rem;
-  }
+
   .hide {
     display: none;
   }
