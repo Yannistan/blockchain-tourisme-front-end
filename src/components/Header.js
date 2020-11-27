@@ -2,11 +2,7 @@ import React, { useContext } from "react";
 
 import { Link } from "react-router-dom";
 
-import {
-  useWindowSize,
-  useWindowWidth,
-  useWindowHeight,
-} from "@react-hook/window-size";
+import { useWindowWidth } from "@react-hook/window-size";
 
 import { IsLoggedInContext } from "../context/IsLoggedInContext";
 
@@ -16,9 +12,7 @@ const Header = () => {
   const { isLoggedIn } = useContext(IsLoggedInContext);
   console.log("isLoggedIn", isLoggedIn);
 
-  const [width, height] = useWindowSize();
   const onlyWidth = useWindowWidth();
-  const onlyHeight = useWindowHeight();
 
   return (
     <>
