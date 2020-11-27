@@ -34,7 +34,6 @@ header a {
   font-family: "Work Sans", sans-serif;
   color: #f4fffd;
   text-decoration: none;
-  color: #f4fffd;
 }
 
 header a:hover {
@@ -54,6 +53,11 @@ nav a:hover {
 
 nav a:hover:nth-child(2) {
   color: #ed217c;
+}
+
+.menu a {
+  font-size: 1rem;
+  display: block;
 }
 
 .connectWeb3P {

@@ -9,7 +9,6 @@ header {
     font-family: $logoFont;
     font-size: 3rem;
     margin-left: 1.5rem;
-
     &:hover {
       color: $red;
     }
@@ -24,7 +23,6 @@ header {
     font-family: $mainFont;
     color: $white;
     text-decoration: none;
-    color: $white;
     &:hover {
       color: $white;
     }
@@ -44,4 +42,9 @@ nav {
       color: $red;
     }
   }
+}
+
+.menu a {
+  font-size: 1rem;
+  display: block;
 }

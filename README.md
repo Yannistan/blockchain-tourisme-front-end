@@ -4,5 +4,6 @@
 
 - "bootstrap": "^5.0.0-alpha3",
 - "react-router-dom": "^5.2.0",
+- "@react-hook/window-size": "^3.0.7",
 
 #### Run `yarn` to install dependencies
