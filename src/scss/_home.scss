@@ -1,5 +1,54 @@
+.connectWeb3P {
+  margin: 3rem 0 0 3rem;
+  color: $white;
+  border: 1px solid $black;
+  font-size: 1rem;
+  font-family: $mainFont;
+  display: inline-block;
+  padding: 0 0.5rem 0 0.5rem;
+  background-color: $transparentBlack;
+  .connectWeb3Btn {
+    font-style: italic;
+    background-color: transparent;
+    color: $red;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-left: 0.3rem;
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.web3on {
+  color: $green;
+  text-shadow: 0 1px 5px black;
+  font-weight: bold;
+  font-style: italic;
+  margin: 3rem 0 0 3rem;
+  display: inline-block;
+  .greenDot {
+    width: 2rem;
+  }
+}
+
+.web3off {
+  color: $red;
+  font-weight: bold;
+  font-style: italic;
+  margin: 1rem 0 0 3rem;
+  text-shadow: 0 1px 3px black;
+  display: inline-block;
+  .redDot {
+    margin: 0 0.5rem 0.1rem 0;
+    width: 1rem;
+  }
+}
+
 .loginForm {
-  margin: 4rem 2rem 2rem 2rem;
+  margin: 2rem 2rem 2rem 2rem;
   color: $white;
   font-family: $mainFont;
   .head {
@@ -50,4 +99,8 @@
       }
     }
   }
+}
+
+.temp {
+  margin-top: 5rem;
 }
