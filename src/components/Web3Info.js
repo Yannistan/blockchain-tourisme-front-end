@@ -36,7 +36,7 @@ const Web3Info = () => {
             </ul>
           </div>
         )}
-        {web3State.chain_id === 4 && "test"}
+        {web3State.chain_id === 4 && ""}
       </div>
     </>
   );

@@ -10,6 +10,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  white-space: nowrap;
 }
 
 header .logo a {
@@ -56,34 +57,60 @@ nav a:hover:nth-child(2) {
 }
 
 .connectWeb3P {
-  margin: 4rem 0 0 3rem;
-  color: #2d3047;
-  border: 1px solid #fffd82;
-  font-size: 1.3rem;
+  margin: 3rem 0 0 3rem;
+  color: #f4fffd;
+  border: 1px solid #2d3047;
+  font-size: 1rem;
   font-family: "Work Sans", sans-serif;
-  -webkit-box-shadow: 0 0 15px;
-          box-shadow: 0 0 15px;
   display: inline-block;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0 0.5rem 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .connectWeb3P .connectWeb3Btn {
   font-style: italic;
   background-color: transparent;
-  color: #2d3047;
+  color: #ed217c;
   border: none;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-transform: uppercase;
+  margin-left: 0.3rem;
 }
 
 .connectWeb3P .connectWeb3Btn:hover {
-  color: #fffd82;
+  color: #6aff0d;
+}
+
+.web3on {
+  color: #6aff0d;
+  text-shadow: 0 1px 5px black;
+  font-weight: bold;
+  font-style: italic;
+  margin: 3rem 0 0 3rem;
+  display: inline-block;
+}
+
+.web3on .greenDot {
+  width: 2rem;
+}
+
+.web3off {
+  color: #ed217c;
+  font-weight: bold;
+  font-style: italic;
+  margin: 1rem 0 0 3rem;
+  text-shadow: 0 1px 3px black;
+  display: inline-block;
+}
+
+.web3off .redDot {
+  margin: 0 0.5rem 0.1rem 0;
+  width: 1rem;
 }
 
 .loginForm {
-  margin: 4rem 2rem 2rem 2rem;
+  margin: 2rem 2rem 2rem 2rem;
   color: #f4fffd;
   font-family: "Work Sans", sans-serif;
 }
@@ -278,7 +305,7 @@ nav a:hover:nth-child(2) {
 }
 
 .reservation .form button:nth-child(1):hover {
-  background-color: #1b998b;
+  background-color: #6aff0d;
   color: #fffd82;
 }
 
@@ -308,7 +335,7 @@ nav a:hover:nth-child(2) {
 }
 
 .web3container .showInfoBtn:hover {
-  background-color: #1b998b;
+  background-color: #6aff0d;
 }
 
 .web3container .hide {
