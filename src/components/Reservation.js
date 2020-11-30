@@ -1,6 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
-import { ethers } from "ethers";
-import { Web3Context } from "../hooks/useWeb3";
+import React, { useContext, useState } from "react";
 
 import { TourismeContext } from "../App";
 
@@ -114,17 +112,19 @@ const Reservation = () => {
                 />
                 <label htmlFor="tours">Tours</label>
               </div>
+              <div className="total">
+                Total amount : <span>{getPrice} </span>TKN
+              </div>
               <div className="buttons">
                 <button type="button" onClick={handleOnClickGetPrice}>
                   Reserve
                 </button>
-                <button onClick={handleOnClickGetPrice}>Get price</button>
-                <p>{getPrice}</p>
+                <button type="button" onClick={handleOnClickGetPrice}>
+                  Get price
+                </button>
                 <button type="submit">PAY</button>
               </div>
             </form>
-
-            <button onClick={handleOnClickPay}>PAY</button>
           </div>
         </div>
       </section>
