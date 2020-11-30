@@ -33,8 +33,8 @@ const Header = () => {
           ) : (
             <>
               <div className="menu">
-                <Link to="/reservation">Reservation</Link>
                 <Link to="/travels">Travels</Link>
+                <Link to="/reservation">Reservation</Link>
               </div>
             </>
           )}
