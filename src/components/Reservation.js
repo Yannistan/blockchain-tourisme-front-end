@@ -48,7 +48,7 @@ const Reservation = () => {
         <div className=" container row">
           <div className="col-sm-12 col-md-8 col-lg-5">
             <div className="head">
-              <h2 className="secondaryTitle">Prepare your dream travel</h2>
+              <h2>Reservation</h2>
             </div>
             <form className="form" onSubmit={handleOnClickPay}>
               <legend>Please select options</legend>

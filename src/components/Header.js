@@ -27,8 +27,8 @@ const Header = () => {
         <nav>
           {onlyWidth > 700 ? (
             <>
-              <Link to="/reservation">Reservation</Link>
               <Link to="/travels">Travels</Link>
+              <Link to="/reservation">Reservation</Link>
             </>
           ) : (
             <>

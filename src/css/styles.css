@@ -195,6 +195,7 @@ nav a:hover:nth-child(2) {
 
 .travel {
   margin-bottom: 10rem;
+  font-family: "Work Sans", sans-serif;
 }
 
 .travel .title {
@@ -216,6 +217,47 @@ nav a:hover:nth-child(2) {
 
 .travel .card {
   max-width: 30rem;
+}
+
+.travel .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.travel .card-text {
+  text-align: justify;
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+}
+
+.travel .card-text a {
+  font-style: italic;
+  text-decoration: none;
+}
+
+.travel button {
+  display: inline-block;
+  font-family: "Work Sans", sans-serif;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border: none;
+  background-color: #ed217c;
+  color: #f4fffd;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.travel button:hover {
+  color: #2d3047;
+  background-color: #fffd82;
 }
 
 .travel img {
