@@ -1,7 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
-import { ethers } from 'ethers';
-import { Web3Context } from "../hooks/useWeb3";
-import { Text, Button, HStack, NumberInput, Input } from "@chakra-ui/core";
+import React, { useContext, useState } from "react";
 
 import { TourismeContext } from "../App";
 
@@ -14,7 +11,7 @@ const Reservation = () => {
   const [inputTours, setInputTours] = useState("");
   const [getPrice, setGetPrice] = useState(0);
   const [ReserveID, setReserveID] = useState(0);
-  const [AddressPayment, setAddressPayment] = useState('0x0'); 
+  const [AddressPayment, setAddressPayment] = useState("0x0");
 
   const handleOnClickSaveOffer = async () => {
     await Tourisme.choose_offer(
@@ -26,10 +23,15 @@ const Reservation = () => {
     );
   };
 
-
   const handleOnClickGetPrice = async () => {
     try {
-      const res = await Tourisme.choose_offer(inputTransport, inputAccommodation, inputCatering, inputActivities, inputTours);
+      const res = await Tourisme.choose_offer(
+        inputTransport,
+        inputAccommodation,
+        inputCatering,
+        inputActivities,
+        inputTours
+      );
       setGetPrice(res.toString());
     } catch (e) {
       console.log(e.message);
@@ -42,14 +44,13 @@ const Reservation = () => {
 
   return (
     <>
- <section className="reservation">
+      <section className="reservation">
         <div className=" container row">
           <div className="col-sm-12 col-md-8 col-lg-5">
             <div className="head">
-              <h2 className="secondaryTitle">Prepare your dream travel</h2>
+              <h2>Reservation</h2>
             </div>
-            <form className="form"
-              onSubmit={handleOnClickPay}>
+            <form className="form" onSubmit={handleOnClickPay}>
               <legend>Please select options</legend>
               <div className="transport">
                 <input
@@ -111,88 +112,22 @@ const Reservation = () => {
                 />
                 <label htmlFor="tours">Tours</label>
               </div>
+              <div className="total">
+                Total amount : <span>{getPrice} </span>TKN
+              </div>
               <div className="buttons">
                 <button type="button" onClick={handleOnClickGetPrice}>
                   Reserve
                 </button>
-                <HStack>
-                <Button onClick={handleOnClickGetPrice}>Get price</Button>
-                <Text>{getPrice}</Text>
-                </HStack>
+                <button type="button" onClick={handleOnClickGetPrice}>
+                  Get price
+                </button>
                 <button type="submit">PAY</button>
-               
               </div>
             </form>
-            <HStack>
-            
-           
-            
-            <Button onClick={handleOnClickPay}>PAY</Button>
-            </HStack>
           </div>
         </div>
       </section>
-
-
-
-
-    {/*  <section className="reservation">
-        <div className=" container row">
-          <div className="col-sm-12 col-md-8 col-lg-5">
-            <div className="head">
-              <h2 className="secondaryTitle">Prepare your dream travel</h2>
-            </div>
-            <form className="form">
-            
-              <legend>Please select options</legend>
-              <div className="transport">
-                <input
-                  type="checkbox"
-                  id="transport"
-                  name="transport"
-                  value="transport"
-                />
-                <label htmlFor="transport">Transport</label>
-              </div>
-              <div className="travel">
-                <input
-                  type="checkbox"
-                  id="travel"
-                  name="travel"
-                  value="travel"
-                />
-                <label htmlFor="travel">Travel</label>
-              </div>
-              <div className="catering">
-                <input
-                  type="checkbox"
-                  id="catering"
-                  name="catering"
-                  value="catering"
-                />
-                <label htmlFor="catering">Catering</label>
-              </div>
-              <div className="activities">
-                <input
-                  type="checkbox"
-                  id="activities"
-                  name="activities"
-                  value="activities"
-                />
-                <label htmlFor="activities">Activities</label>
-              </div>
-              <div className="tours">
-                <input type="checkbox" id="tours" name="tours" value="tours" />
-                <label htmlFor="tours">Tours</label>
-              </div>
-              <div className="buttons">
-                <button type="button">Check Price</button>
-                <button type="submit">PAY</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section> */}
     </>
   );
 };
