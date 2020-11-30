@@ -35,7 +35,6 @@ const Home = () => {
       )}
       <LoginForm />
       <Web3Info />
-      <div className="temp"></div>
       <IntroText />
     </>
   );

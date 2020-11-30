@@ -1,5 +1,5 @@
 header {
-  padding: 0.5rem 0 0.15rem 0;
+  padding: 0.5rem 0 0.4rem 0;
   background-color: rgba(0, 0, 0, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,7 +25,7 @@ header .logo a:hover {
 
 header .logoIcon {
   width: 3rem;
-  margin: 0 0 0.5rem 1rem;
+  margin: 0 0 0.3rem 1rem;
   -webkit-filter: invert(1);
           filter: invert(1);
 }
@@ -34,7 +34,6 @@ header a {
   font-family: "Work Sans", sans-serif;
   color: #f4fffd;
   text-decoration: none;
-  color: #f4fffd;
 }
 
 header a:hover {
@@ -54,6 +53,11 @@ nav a:hover {
 
 nav a:hover:nth-child(2) {
   color: #ed217c;
+}
+
+.menu a {
+  font-size: 1rem;
+  display: block;
 }
 
 .connectWeb3P {
@@ -176,13 +180,11 @@ nav a:hover:nth-child(2) {
   background-color: #dd7104;
 }
 
-.temp {
-  margin-top: 5rem;
-}
-
 .footer {
   position: absolute;
-  bottom: 0px;
+  display: block;
+  bottom: 0;
+  left: 0;
   width: 100%;
   padding: 1rem;
   background-color: #2d3047;
@@ -324,7 +326,7 @@ nav a:hover:nth-child(2) {
 }
 
 .web3container .showInfoBtn {
-  margin: 0.5rem 0 2rem 3rem;
+  margin: 0.5rem 0 10rem 3rem;
   padding: 0.5rem;
   background: #2d3047;
   border: none;
@@ -384,6 +386,8 @@ nav a:hover:nth-child(2) {
 
 html {
   font-size: 100%;
+  position: relative;
+  min-height: 100vh;
 }
 
 body {
