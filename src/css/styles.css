@@ -195,6 +195,7 @@ nav a:hover:nth-child(2) {
 
 .travel {
   margin-bottom: 10rem;
+  font-family: "Work Sans", sans-serif;
 }
 
 .travel .title {
@@ -216,6 +217,47 @@ nav a:hover:nth-child(2) {
 
 .travel .card {
   max-width: 30rem;
+}
+
+.travel .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.travel .card-text {
+  text-align: justify;
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+}
+
+.travel .card-text a {
+  font-style: italic;
+  text-decoration: none;
+}
+
+.travel button {
+  display: inline-block;
+  font-family: "Work Sans", sans-serif;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border: none;
+  background-color: #ed217c;
+  color: #f4fffd;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.travel button:hover {
+  color: #2d3047;
+  background-color: #fffd82;
 }
 
 .travel img {
@@ -284,6 +326,21 @@ nav a:hover:nth-child(2) {
   font-size: 1.2rem;
 }
 
+.reservation .form .total {
+  color: #f4fffd;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+}
+
+.reservation .form .total span {
+  font-weight: bold;
+}
+
 .reservation .form .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,7 +360,6 @@ nav a:hover:nth-child(2) {
 
 .reservation .form button:nth-child(1) {
   background: #dd7104;
-  margin-left: 1rem;
 }
 
 .reservation .form button:nth-child(1):hover {
@@ -312,11 +368,21 @@ nav a:hover:nth-child(2) {
 }
 
 .reservation .form button:nth-child(2) {
-  background: #ed217c;
+  background: #dd7104;
   margin-left: 1rem;
 }
 
 .reservation .form button:nth-child(2):hover {
+  background-color: #fffd82;
+  color: #ed217c;
+}
+
+.reservation .form button:nth-child(3) {
+  background: #ed217c;
+  margin-left: 1rem;
+}
+
+.reservation .form button:nth-child(3):hover {
   background-color: #fffd82;
   color: #ed217c;
 }

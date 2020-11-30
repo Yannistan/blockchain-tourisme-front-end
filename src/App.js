@@ -8,8 +8,14 @@ export const TourismeContext = React.createContext(null);
 function App() {
   const tourisme = useContract(Tourisme_address, Tourisme_abi);
  // const tourToken = useContract(TourToken_address, TourToken_abi);
-  return (
+  //return (
    
+
+// export const TourTokenContext = React.createContext(null)
+
+  //const tourisme = useContract(Tourisme_address, Tourisme_abi);
+  // const TourToken = useContract(TourToken_address, TourToken_abi)
+  return (
     <TourismeContext.Provider value={tourisme}>
       <Dapp />
     </TourismeContext.Provider>
