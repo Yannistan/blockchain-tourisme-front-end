@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 export const Tourisme_address = "0x4346fDfc628431286fcC0a4Ef1890d51509C7073";
-=======
-export const Tourisme_address = "0xc5b5181f9F9066bb7BC1611B95615AB797E91f69";
->>>>>>> a5b6b73f3777b09397cbc6dc78a68f6fb3c27900
+//export const Tourisme_address = "0xc5b5181f9F9066bb7BC1611B95615AB797E91f69";
 
 export const Tourisme_abi = [
   {
