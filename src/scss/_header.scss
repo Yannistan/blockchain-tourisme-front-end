@@ -1,5 +1,5 @@
 header {
-  padding: 0.5rem 0 0.15rem 0;
+  padding: 0.5rem 0 0.4rem 0;
   background-color: $transparentBlack;
   display: flex;
   justify-content: space-between;
@@ -9,14 +9,13 @@ header {
     font-family: $logoFont;
     font-size: 3rem;
     margin-left: 1.5rem;
-
     &:hover {
       color: $red;
     }
   }
   .logoIcon {
     width: 3rem;
-    margin: 0 0 0.5rem 1rem;
+    margin: 0 0 0.3rem 1rem;
     filter: invert(1);
   }
 
@@ -24,7 +23,6 @@ header {
     font-family: $mainFont;
     color: $white;
     text-decoration: none;
-    color: $white;
     &:hover {
       color: $white;
     }
@@ -44,4 +42,9 @@ nav {
       color: $red;
     }
   }
+}
+
+.menu a {
+  font-size: 1rem;
+  display: block;
 }
