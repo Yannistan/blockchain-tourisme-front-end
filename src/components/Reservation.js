@@ -1,8 +1,10 @@
 import React, { useContext, useState } from "react";
 
+import { DestinationContext } from "../context/DestinationContext";
 import { TourismeContext } from "../App";
 
 const Reservation = () => {
+  const { destination } = useContext(DestinationContext);
   const Tourisme = useContext(TourismeContext);
   const [inputTransport, setInputTransport] = useState();
   const [inputAccommodation, setInputAccommodation] = useState("");
@@ -51,6 +53,11 @@ const Reservation = () => {
               <h2>Reservation</h2>
             </div>
             <form className="form" onSubmit={handleOnClickPay}>
+              {destination !== undefined && (
+                <p>
+                  Your trip to <span>{destination}</span>
+                </p>
+              )}
               <legend>Please select options</legend>
               <div className="transport">
                 <input

@@ -2,7 +2,7 @@
   margin-bottom: 10rem;
   font-family: $mainFont;
   .title {
-    margin: 4rem 2rem 2rem 2rem;
+    margin: 4rem 0 2rem 2rem;
     color: $white;
     font-family: $mainFont;
     background-color: $black;
@@ -10,14 +10,53 @@
     padding: 1rem;
   }
   .secondaryTitle {
-    display: inline-block;
+    display: inline;
     margin-left: 2rem;
     padding: 1rem;
     font-size: 1rem;
     background-color: $white;
   }
+  .selection {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background-color: $transparentBlack;
+    padding: 1rem;
+    border-radius: 10px;
+    p {
+      color: $white;
+    }
+    .clear {
+      color: $black;
+      background-color: $yellow;
+      width: 100%;
+    }
+    a {
+      display: block;
+      text-align: center;
+      font-family: $mainFont;
+      padding: 0.5rem;
+      font-size: 0.8rem;
+      border: none;
+      background-color: $red;
+      color: $white;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      &:hover {
+        color: $black;
+        background-color: $yellow;
+      }
+    }
+  }
   .card {
     max-width: 30rem;
+    background-color: $white;
+  }
+  .cardSelected {
+    border: 5px solid $red;
   }
   .flexContainer {
     display: flex;
@@ -40,13 +79,21 @@
     padding: 0.5rem;
     font-size: 0.8rem;
     border: none;
-    background-color: $red;
+    background-color: $orange;
     color: $white;
     font-weight: bold;
     text-transform: uppercase;
     &:hover {
       color: $black;
       background-color: $yellow;
+    }
+  }
+  .selected {
+    background-color: $red;
+    color: $white;
+    &:hover {
+      background-color: $red;
+      color: $white;
     }
   }
 
