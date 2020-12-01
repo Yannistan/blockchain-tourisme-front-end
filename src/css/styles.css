@@ -215,20 +215,53 @@ nav a:hover:nth-child(2) {
   background-color: #f4fffd;
 }
 
-.travel .clear {
-  background-color: rgba(255, 255, 255, 0.4);
+.travel .selection {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.travel .selection p {
+  color: #f4fffd;
+}
+
+.travel .selection .clear {
   color: #2d3047;
-  display: inline;
-  margin-left: 2rem;
-  margin-bottom: 2rem;
+  background-color: #fffd82;
+  width: 100%;
+}
+
+.travel .selection a {
+  display: block;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border: none;
+  background-color: #ed217c;
+  color: #f4fffd;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.travel .selection a:hover {
+  color: #2d3047;
+  background-color: #fffd82;
 }
 
 .travel .card {
   max-width: 30rem;
+  background-color: #f4fffd;
 }
 
 .travel .cardSelected {
-  background-color: #dd7104;
+  border: 5px solid #ed217c;
 }
 
 .travel .flexContainer {
@@ -261,7 +294,7 @@ nav a:hover:nth-child(2) {
   padding: 0.5rem;
   font-size: 0.8rem;
   border: none;
-  background-color: #ed217c;
+  background-color: #dd7104;
   color: #f4fffd;
   font-weight: bold;
   text-transform: uppercase;
@@ -273,12 +306,12 @@ nav a:hover:nth-child(2) {
 }
 
 .travel .selected {
-  background-color: blue;
+  background-color: #ed217c;
   color: #f4fffd;
 }
 
 .travel .selected:hover {
-  background-color: blue;
+  background-color: #ed217c;
   color: #f4fffd;
 }
 

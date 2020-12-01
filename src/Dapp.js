@@ -7,6 +7,7 @@ import Travels from "./components/Travels";
 import Reservation from "./components/Reservation";
 
 import IsLoggedInContextProvider from "./context/IsLoggedInContext";
+import DestinationContextProvider from "./context/DestinationContext";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -17,12 +18,14 @@ function Dapp() {
     <>
       <Router>
         <IsLoggedInContextProvider>
-          <Header />
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/reservation" exact component={Reservation} />
-            <Route path="/travels" exact component={Travels} />
-          </Switch>
+          <DestinationContextProvider>
+            <Header />
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/reservation" exact component={Reservation} />
+              <Route path="/travels" exact component={Travels} />
+            </Switch>
+          </DestinationContextProvider>
         </IsLoggedInContextProvider>
         <Footer />
       </Router>

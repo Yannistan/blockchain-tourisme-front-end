@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+
+import { Link } from "react-router-dom";
+
+import { DestinationContext } from "../context/DestinationContext";
 
 import NewYork from "../images/small/new_york.jpg";
 import Maldives from "../images/small/maldives.jpg";
@@ -6,8 +10,8 @@ import Vancouver from "../images/small/vancouver.jpg";
 import Barcelona from "../images/small/barcelona.jpg";
 
 const Travels = () => {
-  const [destination, setDestination] = useState(undefined);
-  console.log(destination);
+  const { destination, setDestination } = useContext(DestinationContext);
+  console.log("destination :", destination);
 
   return (
     <section className="travel">
@@ -15,9 +19,13 @@ const Travels = () => {
       <h3 className="secondaryTitle">Select your dream travel</h3>
 
       {destination !== undefined && (
-        <button onClick={() => setDestination(undefined)} className="clear">
-          × clear destination
-        </button>
+        <div className="selection">
+          <p>Your trip to {destination} :</p>
+          <Link to="/reservation">Reserve</Link>
+          <button onClick={() => setDestination(undefined)} className="clear">
+            × clear destination
+          </button>
+        </div>
       )}
 
       <div className="mx-3 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">

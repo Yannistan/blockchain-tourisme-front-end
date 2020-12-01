@@ -16,18 +16,47 @@
     font-size: 1rem;
     background-color: $white;
   }
-  .clear {
-    background-color: $transparentWhite;
-    color: $black;
-    display: inline;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
+  .selection {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background-color: $transparentBlack;
+    padding: 1rem;
+    border-radius: 10px;
+    p {
+      color: $white;
+    }
+    .clear {
+      color: $black;
+      background-color: $yellow;
+      width: 100%;
+    }
+    a {
+      display: block;
+      text-align: center;
+      font-family: $mainFont;
+      padding: 0.5rem;
+      font-size: 0.8rem;
+      border: none;
+      background-color: $red;
+      color: $white;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      &:hover {
+        color: $black;
+        background-color: $yellow;
+      }
+    }
   }
   .card {
     max-width: 30rem;
+    background-color: $white;
   }
   .cardSelected {
-    background-color: $orange;
+    border: 5px solid $red;
   }
   .flexContainer {
     display: flex;
@@ -50,7 +79,7 @@
     padding: 0.5rem;
     font-size: 0.8rem;
     border: none;
-    background-color: $red;
+    background-color: $orange;
     color: $white;
     font-weight: bold;
     text-transform: uppercase;
@@ -60,10 +89,10 @@
     }
   }
   .selected {
-    background-color: blue;
+    background-color: $red;
     color: $white;
     &:hover {
-      background-color: blue;
+      background-color: $red;
       color: $white;
     }
   }
