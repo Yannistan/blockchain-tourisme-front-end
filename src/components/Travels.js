@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import NewYork from "../images/small/new_york.jpg";
 import Maldives from "../images/small/maldives.jpg";
@@ -6,19 +6,36 @@ import Vancouver from "../images/small/vancouver.jpg";
 import Barcelona from "../images/small/barcelona.jpg";
 
 const Travels = () => {
+  const [destination, setDestination] = useState(undefined);
+  console.log(destination);
+
   return (
     <section className="travel">
       <h2 className="title">Travels</h2>
       <h3 className="secondaryTitle">Select your dream travel</h3>
 
+      {destination !== undefined && (
+        <button onClick={() => setDestination(undefined)} className="clear">
+          × clear destination
+        </button>
+      )}
+
       <div className="mx-3 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
         <div className="col">
-          <div className="card">
+          <div
+            className={`card ${destination === "New York" ? "cardSelected" : ""}
+            `}
+          >
             <img src={NewYork} className="card-img-top p-2" alt="New York" />
             <div className="card-body">
               <div className="flexContainer">
                 <h5 className="card-title">New York</h5>
-                <button>Select</button>
+                <button
+                  onClick={() => setDestination("New York")}
+                  className={destination === "New York" ? "selected" : ""}
+                >
+                  {destination === "New York" ? "Selected" : "Select"}
+                </button>
               </div>
               <p className="card-text">
                 New York City (NYC), often called simply New York, is the most
@@ -37,7 +54,10 @@ const Travels = () => {
         </div>
 
         <div className="col">
-          <div className="card">
+          <div
+            className={`card ${destination === "Maldives" ? "cardSelected" : ""}
+            `}
+          >
             <img
               src={Maldives}
               className="card-img-top p-2 img-fluid"
@@ -46,7 +66,14 @@ const Travels = () => {
             <div className="card-body">
               <div className="flexContainer">
                 <h5 className="card-title">Maldives</h5>
-                <button>Select</button>
+                <button
+                  onClick={() => setDestination("Maldives")}
+                  className={
+                    destination === "Maldives" ? "selected" : undefined
+                  }
+                >
+                  {destination === "Maldives" ? "Selected" : "Select"}
+                </button>
               </div>
               <p className="card-text">
                 Maldives, officially the Republic of Maldives, is a small
@@ -65,7 +92,12 @@ const Travels = () => {
         </div>
 
         <div className="col">
-          <div className="card">
+          <div
+            className={`card ${
+              destination === "Vancouver" ? "cardSelected" : ""
+            }
+            `}
+          >
             <img
               src={Vancouver}
               className="card-img-top p-2 img-fluid"
@@ -74,7 +106,14 @@ const Travels = () => {
             <div className="card-body">
               <div className="flexContainer">
                 <h5 className="card-title">Vancouver</h5>
-                <button>Select</button>
+                <button
+                  onClick={() => setDestination("Vancouver")}
+                  className={
+                    destination === "Vancouver" ? "selected" : undefined
+                  }
+                >
+                  {destination === "Vancouver" ? "Selected" : "Select"}
+                </button>
               </div>
               <p className="card-text">
                 Vancouver is a major city in western Canada, located in the
@@ -93,7 +132,12 @@ const Travels = () => {
         </div>
 
         <div className="col">
-          <div className="card">
+          <div
+            className={`card ${
+              destination === "Barcelona" ? "cardSelected" : ""
+            }
+            `}
+          >
             <img
               src={Barcelona}
               className="card-img-top p-2 img-fluid"
@@ -102,7 +146,14 @@ const Travels = () => {
             <div className="card-body">
               <div className="flexContainer">
                 <h5 className="card-title">Barcelona</h5>
-                <button>Select</button>
+                <button
+                  onClick={() => setDestination("Barcelona")}
+                  className={
+                    destination === "Barcelona" ? "selected" : undefined
+                  }
+                >
+                  {destination === "Barcelona" ? "Selected" : "Select"}
+                </button>
               </div>
               <p className="card-text">
                 Barcelona is a city on the coast of northeastern Spain. It is

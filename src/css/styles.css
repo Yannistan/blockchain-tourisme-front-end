@@ -199,7 +199,7 @@ nav a:hover:nth-child(2) {
 }
 
 .travel .title {
-  margin: 4rem 2rem 2rem 2rem;
+  margin: 4rem 0 2rem 2rem;
   color: #f4fffd;
   font-family: "Work Sans", sans-serif;
   background-color: #2d3047;
@@ -208,15 +208,27 @@ nav a:hover:nth-child(2) {
 }
 
 .travel .secondaryTitle {
-  display: inline-block;
+  display: inline;
   margin-left: 2rem;
   padding: 1rem;
   font-size: 1rem;
   background-color: #f4fffd;
 }
 
+.travel .clear {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #2d3047;
+  display: inline;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
 .travel .card {
   max-width: 30rem;
+}
+
+.travel .cardSelected {
+  background-color: #dd7104;
 }
 
 .travel .flexContainer {
@@ -258,6 +270,16 @@ nav a:hover:nth-child(2) {
 .travel button:hover {
   color: #2d3047;
   background-color: #fffd82;
+}
+
+.travel .selected {
+  background-color: blue;
+  color: #f4fffd;
+}
+
+.travel .selected:hover {
+  background-color: blue;
+  color: #f4fffd;
 }
 
 .travel img {

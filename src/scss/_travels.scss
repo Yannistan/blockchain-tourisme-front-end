@@ -2,7 +2,7 @@
   margin-bottom: 10rem;
   font-family: $mainFont;
   .title {
-    margin: 4rem 2rem 2rem 2rem;
+    margin: 4rem 0 2rem 2rem;
     color: $white;
     font-family: $mainFont;
     background-color: $black;
@@ -10,14 +10,24 @@
     padding: 1rem;
   }
   .secondaryTitle {
-    display: inline-block;
+    display: inline;
     margin-left: 2rem;
     padding: 1rem;
     font-size: 1rem;
     background-color: $white;
   }
+  .clear {
+    background-color: $transparentWhite;
+    color: $black;
+    display: inline;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
   .card {
     max-width: 30rem;
+  }
+  .cardSelected {
+    background-color: $orange;
   }
   .flexContainer {
     display: flex;
@@ -47,6 +57,14 @@
     &:hover {
       color: $black;
       background-color: $yellow;
+    }
+  }
+  .selected {
+    background-color: blue;
+    color: $white;
+    &:hover {
+      background-color: blue;
+      color: $white;
     }
   }
 
