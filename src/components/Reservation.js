@@ -19,8 +19,9 @@ const Reservation = () => {
 
   const handleOnClickSaveOffer = async () => {
     await Tourisme.choose_offer(
-      inputTransport,
+      destination, 
       inputAccommodation,
+      inputTransport,
       inputCatering,
       inputActivities,
       inputTours
@@ -29,13 +30,7 @@ const Reservation = () => {
 
   const handleOnClickGetPrice = async () => {
     try {
-      const res = await Tourisme.choose_offer(
-        inputTransport,
-        inputAccommodation,
-        inputCatering,
-        inputActivities,
-        inputTours
-      );
+      const res = await Tourisme.getPrice(ReserveID);
       setGetPrice(res.toString());
     } catch (e) {
       console.log(e.message);
@@ -138,7 +133,7 @@ const Reservation = () => {
                 <label htmlFor="tours">Tours</label>
               </div>
               <div className="total">
-                Total amount : <span>{getPrice} </span>TKN
+                Total amount : <span>{getPrice} </span>TRM
               </div>
               <div className="buttons">
                 <button type="button" onClick={handleOnClickSaveOffer}>
