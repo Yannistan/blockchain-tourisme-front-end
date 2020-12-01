@@ -39,10 +39,10 @@ const Travels = () => {
               <div className="flexContainer">
                 <h5 className="card-title">New York</h5>
                 <button
-                  onClick={() => setDestination("New York")}
-                  className={destination === "New York" ? "selected" : ""}
+                  onClick={() => setDestination("NewYork")}
+                  className={destination === "NewYork" ? "selected" : ""}
                 >
-                  {destination === "New York" ? "Selected" : "Select"}
+                  {destination === "NewYork" ? "Selected" : "Select"}
                 </button>
               </div>
               <p className="card-text">
