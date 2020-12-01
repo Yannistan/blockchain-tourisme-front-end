@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 
+import { Link } from "react-router-dom";
+
 import { DestinationContext } from "../context/DestinationContext";
 import { TourismeContext } from "../App";
 
@@ -48,14 +50,26 @@ const Reservation = () => {
               <h2>Reservation</h2>
             </div>
             <form className="form" onSubmit={handleOnClickPay}>
-              {destination !== undefined && (
+              {destination !== undefined ? (
                 <p>
                   Your trip to <span>{destination}</span>
+                  <sup>
+                    <Link to="/travels" className="edit">
+                      (edit)
+                    </Link>
+                  </sup>
+                </p>
+              ) : (
+                <p>
+                  First, please select a <Link to="/travels">destination</Link>
                 </p>
               )}
-              <legend>Please select options</legend>
+              {destination !== undefined && (
+                <legend>Please select options</legend>
+              )}
               <div className="transport">
                 <input
+                  disabled={destination === undefined}
                   type="checkbox"
                   id="transport"
                   name="transport"
@@ -68,6 +82,7 @@ const Reservation = () => {
               </div>
               <div className="travel">
                 <input
+                  disabled={destination === undefined}
                   type="checkbox"
                   id="travel"
                   name="travel"
@@ -80,6 +95,7 @@ const Reservation = () => {
               </div>
               <div className="catering">
                 <input
+                  disabled={destination === undefined}
                   type="checkbox"
                   id="catering"
                   name="catering"
@@ -92,6 +108,7 @@ const Reservation = () => {
               </div>
               <div className="activities">
                 <input
+                  disabled={destination === undefined}
                   type="checkbox"
                   id="activities"
                   name="activities"
@@ -104,6 +121,7 @@ const Reservation = () => {
               </div>
               <div className="tours">
                 <input
+                  disabled={destination === undefined}
                   type="checkbox"
                   id="tours"
                   name="tours"
