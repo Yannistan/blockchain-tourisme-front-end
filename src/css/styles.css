@@ -63,11 +63,11 @@ nav a:hover:nth-child(2) {
 .connectWeb3P {
   margin: 3rem 0 0 3rem;
   color: #f4fffd;
-  border: 1px solid #2d3047;
+  border: 1px solid #f4fffd;
   font-size: 1rem;
   font-family: "Work Sans", sans-serif;
   display: inline-block;
-  padding: 0 0.5rem 0 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -182,7 +182,12 @@ nav a:hover:nth-child(2) {
 
 .footer {
   position: absolute;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -191,6 +196,9 @@ nav a:hover:nth-child(2) {
   color: #f4fffd;
   font-family: "Work Sans", sans-serif;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .travel {
@@ -201,17 +209,18 @@ nav a:hover:nth-child(2) {
 .travel .title {
   margin: 4rem 0 2rem 2rem;
   color: #f4fffd;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Lobster", cursive;
   background-color: #2d3047;
   display: inline-block;
-  padding: 1rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
 }
 
 .travel .secondaryTitle {
   display: inline;
+  font-family: "Lobster", cursive;
   margin-left: 2rem;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   background-color: #f4fffd;
 }
 
@@ -224,16 +233,22 @@ nav a:hover:nth-child(2) {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 1rem;
   border-radius: 10px;
+  font-weight: bold;
 }
 
 .travel .selection p {
-  color: #f4fffd;
+  color: #fffd82;
 }
 
 .travel .selection .clear {
+  color: #f4fffd;
+  background-color: #2d3047;
+  width: 100%;
+}
+
+.travel .selection .clear:hover {
   color: #2d3047;
   background-color: #fffd82;
-  width: 100%;
 }
 
 .travel .selection a {
@@ -301,8 +316,7 @@ nav a:hover:nth-child(2) {
 }
 
 .travel button:hover {
-  color: #2d3047;
-  background-color: #fffd82;
+  background-color: #ed217c;
 }
 
 .travel .selected {
@@ -335,6 +349,11 @@ nav a:hover:nth-child(2) {
       justify-content: space-around;
 }
 
+.reservation .head h2 {
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
+}
+
 .reservation .form {
   color: #2d3047;
   background-color: rgba(0, 0, 0, 0.4);
@@ -347,6 +366,22 @@ nav a:hover:nth-child(2) {
 }
 
 .reservation .form p span {
+  color: #fffd82;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.reservation .form p .edit {
+  font-size: 0.8rem;
+  color: #f4fffd;
+  font-weight: 500;
+  font-style: italic;
+  text-decoration: underline;
+  margin-left: 0.5rem;
+}
+
+.reservation .form p a {
+  text-decoration: none;
   color: #ed217c;
   font-weight: bold;
   font-size: 1.5rem;

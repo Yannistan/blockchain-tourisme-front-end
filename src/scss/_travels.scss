@@ -4,16 +4,17 @@
   .title {
     margin: 4rem 0 2rem 2rem;
     color: $white;
-    font-family: $mainFont;
+    font-family: $logoFont;
     background-color: $black;
     display: inline-block;
-    padding: 1rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
   }
   .secondaryTitle {
     display: inline;
+    font-family: $logoFont;
     margin-left: 2rem;
     padding: 1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     background-color: $white;
   }
   .selection {
@@ -25,13 +26,18 @@
     background-color: $transparentBlack;
     padding: 1rem;
     border-radius: 10px;
+    font-weight: bold;
     p {
-      color: $white;
+      color: $yellow;
     }
     .clear {
-      color: $black;
-      background-color: $yellow;
+      color: $white;
+      background-color: $black;
       width: 100%;
+      &:hover {
+        color: $black;
+        background-color: $yellow;
+      }
     }
     a {
       display: block;
@@ -84,8 +90,7 @@
     font-weight: bold;
     text-transform: uppercase;
     &:hover {
-      color: $black;
-      background-color: $yellow;
+      background-color: $red;
     }
   }
   .selected {
