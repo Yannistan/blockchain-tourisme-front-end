@@ -116,7 +116,7 @@ const Reservation = () => {
                 Total amount : <span>{getPrice} </span>TKN
               </div>
               <div className="buttons">
-                <button type="button" onClick={handleOnClickGetPrice}>
+                <button type="button" onClick={handleOnClickSaveOffer}>
                   Reserve
                 </button>
                 <button type="button" onClick={handleOnClickGetPrice}>
