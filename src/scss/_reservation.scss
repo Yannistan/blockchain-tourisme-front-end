@@ -46,10 +46,10 @@
       }
     }
     .cancel {
-      background-color: $red;
+      background-color: $orange;
       &:hover {
-        background-color: $yellow;
-        color: $red;
+        background-color: $red;
+        color: $yellow;
       }
     }
     legend {

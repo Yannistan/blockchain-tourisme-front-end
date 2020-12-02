@@ -396,12 +396,12 @@ nav a:hover:nth-child(2) {
 }
 
 .reservation .form .cancel {
-  background-color: #ed217c;
+  background-color: #dd7104;
 }
 
 .reservation .form .cancel:hover {
-  background-color: #fffd82;
-  color: #ed217c;
+  background-color: #ed217c;
+  color: #fffd82;
 }
 
 .reservation .form legend {
