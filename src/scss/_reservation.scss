@@ -76,6 +76,15 @@
         font-size: 1.2rem;
       }
     }
+    .getters {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+      margin-bottom: 1rem;
+      button:hover {
+        color: $yellow;
+      }
+    }
     .id {
       color: $black;
       text-transform: uppercase;
@@ -83,7 +92,7 @@
       text-align: center;
       background-color: $transparentWhite2;
       padding: 0.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.6rem;
       border-radius: 3px;
       span {
         font-weight: bold;
@@ -96,7 +105,7 @@
       text-align: center;
       background-color: $transparentWhite2;
       padding: 0.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       border-radius: 3px;
       span {
         font-weight: bold;
@@ -111,15 +120,6 @@
       font-weight: bold;
       border-radius: 3px;
       background-color: $black;
-    }
-    .getters {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.7rem;
-      margin-bottom: 1rem;
-      button:hover {
-        color: $yellow;
-      }
     }
     .pay {
       background: $red;
