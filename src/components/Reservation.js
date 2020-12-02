@@ -7,6 +7,7 @@ import { TourismeContext } from "../App";
 
 const Reservation = () => {
   const { destination } = useContext(DestinationContext);
+  const [reserved, setReserved] = useState(false);
   const Tourisme = useContext(TourismeContext);
   const [inputTransport, setInputTransport] = useState();
   const [inputAccommodation, setInputAccommodation] = useState("");
@@ -18,6 +19,7 @@ const Reservation = () => {
   const [AddressPayment, setAddressPayment] = useState("0x0");
 
   const handleOnClickSaveOffer = async () => {
+    setReserved(true);
     const res = await Tourisme.choose_offer(
       destination,
       inputAccommodation,
@@ -58,6 +60,10 @@ const Reservation = () => {
     setReserveID(res.toString());
   }; */
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
     <>
       <section className="reservation">
@@ -71,9 +77,11 @@ const Reservation = () => {
                 <p>
                   Your trip to <span>{destination}</span>
                   <sup>
-                    <Link to="/travels" className="edit">
-                      (edit)
-                    </Link>
+                    {!reserved && (
+                      <Link to="/travels" className="edit">
+                        (edit)
+                      </Link>
+                    )}
                   </sup>
                 </p>
               ) : (
@@ -81,7 +89,7 @@ const Reservation = () => {
                   First, please select a <Link to="/travels">destination</Link>
                 </p>
               )}
-              {destination !== undefined && (
+              {destination !== undefined && !reserved && (
                 <button
                   type="button"
                   title="Send reservation to contract"
@@ -89,6 +97,16 @@ const Reservation = () => {
                   className="reserve"
                 >
                   Reserve
+                </button>
+              )}
+              {reserved && (
+                <button
+                  type="button"
+                  title="Cancel your reservation"
+                  onClick={refreshPage}
+                  className="cancel"
+                >
+                  Cancel reservation
                 </button>
               )}
               {destination !== undefined && (

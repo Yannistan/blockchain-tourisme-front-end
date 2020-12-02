@@ -45,6 +45,13 @@
         color: $yellow;
       }
     }
+    .cancel {
+      background-color: $red;
+      &:hover {
+        background-color: $yellow;
+        color: $red;
+      }
+    }
     legend {
       color: $white;
       font-size: 1rem;
