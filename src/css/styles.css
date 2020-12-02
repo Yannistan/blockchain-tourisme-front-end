@@ -486,7 +486,7 @@ nav a:hover:nth-child(2) {
   margin-bottom: 1rem;
 }
 
-.reservation .form .getters:hover {
+.reservation .form .getters button:hover {
   color: #fffd82;
 }
 

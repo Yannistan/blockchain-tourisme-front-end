@@ -110,7 +110,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 0.7rem;
       margin-bottom: 1rem;
-      &:hover {
+      button:hover {
         color: $yellow;
       }
     }
