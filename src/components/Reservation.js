@@ -18,23 +18,20 @@ const Reservation = () => {
   const [AddressPayment, setAddressPayment] = useState("0x0");
 
   const handleOnClickSaveOffer = async () => {
-  const res =  await Tourisme.choose_offer(
-      destination, 
+    const res = await Tourisme.choose_offer(
+      destination,
       inputAccommodation,
       inputTransport,
       inputCatering,
       inputActivities,
       inputTours
     );
-    
   };
 
-  const handleOnClickGetID = async () => {
+  /*   const handleOnClickGetID = async () => {
     const res = await Tourisme.getofferID();
     setReserveID(res.toString());
-  }
-
-  
+  } */
 
   const handleOnClickGetPrice = async () => {
     try {
@@ -45,9 +42,20 @@ const Reservation = () => {
     }
   };
 
-
   const handleOnClickPay = async () => {
     await Tourisme.reserveByClient(ReserveID, AddressPayment);
+  };
+
+  const handleOnClickGetID = async () => {
+    const res = await Tourisme.choose_offer(
+      destination,
+      inputAccommodation,
+      inputTransport,
+      inputCatering,
+      inputActivities,
+      inputTours
+    );
+    setReserveID(res.toString());
   };
 
   return (
@@ -141,22 +149,44 @@ const Reservation = () => {
                 />
                 <label htmlFor="tours">Tours</label>
               </div>
-              <div className="id">Reservation ID : <span>{ReserveID}</span> 
-                         </div>
+              <div className="id">
+                Reservation ID : <span>{ReserveID}</span>
+              </div>
               <div className="total">
                 Total amount : <span>{getPrice} </span>TRM
               </div>
               <div className="buttons">
-                <button type="button" onClick={handleOnClickSaveOffer}>
+                <button
+                  disabled={destination === undefined}
+                  type="button"
+                  title="Get reservation ID"
+                  onClick={handleOnClickGetID}
+                >
+                  Get ID
+                </button>
+                <button
+                  disabled={destination === undefined}
+                  type="button"
+                  title="Send reservation to contract"
+                  onClick={handleOnClickSaveOffer}
+                >
                   Reserve
                 </button>
-                <button type="button" onClick={handleOnClickGetID}>
-                  GetID
-                </button>
-                <button type="button" onClick={handleOnClickGetPrice}>
+                <button
+                  disabled={destination === undefined}
+                  type="button"
+                  title="Get reservation amount"
+                  onClick={handleOnClickGetPrice}
+                >
                   Get price
                 </button>
-                <button type="submit">PAY</button>
+                <button
+                  disabled={destination === undefined}
+                  type="submit"
+                  title="Pay reservation"
+                >
+                  PAY
+                </button>
               </div>
             </form>
           </div>
