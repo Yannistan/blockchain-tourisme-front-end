@@ -5,7 +5,7 @@ import Barcelona from "../images/small/barcelona.jpg";
 
 export const destinations = [
   {
-    name: "New York",
+    name: "NewYork",
     description: `New York City (NYC), often called simply New York, is the most
   populous city in the United States. With an estimated 2019
   population of 8,336,817 distributed ...`,

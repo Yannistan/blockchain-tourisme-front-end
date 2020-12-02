@@ -28,10 +28,10 @@ const Reservation = () => {
     );
   };
 
-  /*   const handleOnClickGetID = async () => {
+    const handleOnClickGetID = async () => {
     const res = await Tourisme.getofferID();
     setReserveID(res.toString());
-  } */
+  };
 
   const handleOnClickGetPrice = async () => {
     try {
@@ -46,7 +46,7 @@ const Reservation = () => {
     await Tourisme.reserveByClient(ReserveID, AddressPayment);
   };
 
-  const handleOnClickGetID = async () => {
+ /* const handleOnClickGetID = async () => {
     const res = await Tourisme.choose_offer(
       destination,
       inputAccommodation,
@@ -56,7 +56,7 @@ const Reservation = () => {
       inputTours
     );
     setReserveID(res.toString());
-  };
+  }; */
 
   return (
     <>
