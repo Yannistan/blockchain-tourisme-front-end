@@ -387,11 +387,20 @@ nav a:hover:nth-child(2) {
   font-size: 1.5rem;
 }
 
+.reservation .form .reserve {
+  background-color: #dd7104;
+}
+
+.reservation .form .reserve:hover {
+  color: #fffd82;
+}
+
 .reservation .form legend {
   color: #f4fffd;
   font-size: 1rem;
   font-style: italic;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
+  margin-top: 1.2rem;
 }
 
 .reservation .form .transport,
@@ -434,7 +443,6 @@ nav a:hover:nth-child(2) {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.6);
   padding: 0.5rem;
-  margin-top: 1.5rem;
   margin-bottom: 1rem;
   border-radius: 3px;
 }
@@ -458,14 +466,6 @@ nav a:hover:nth-child(2) {
   font-weight: bold;
 }
 
-.reservation .form .buttons {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  gap: 0.7rem;
-}
-
 .reservation .form button {
   width: 100%;
   padding: 0.5rem;
@@ -474,37 +474,27 @@ nav a:hover:nth-child(2) {
   font-size: 1rem;
   font-weight: bold;
   border-radius: 3px;
+  background-color: #2d3047;
 }
 
-.reservation .form button:nth-child(1) {
-  background: #2d3047;
+.reservation .form .getters {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
 }
 
-.reservation .form button:nth-child(1):hover {
+.reservation .form .getters:hover {
   color: #fffd82;
 }
 
-.reservation .form button:nth-child(2) {
-  background-color: #dd7104;
-}
-
-.reservation .form button:nth-child(2):hover {
-  color: #fffd82;
-}
-
-.reservation .form button:nth-child(3) {
-  background: #2d3047;
-}
-
-.reservation .form button:nth-child(3):hover {
-  color: #fffd82;
-}
-
-.reservation .form button:nth-child(4) {
+.reservation .form .pay {
   background: #ed217c;
 }
 
-.reservation .form button:nth-child(4):hover {
+.reservation .form .pay:hover {
   background-color: #fffd82;
   color: #ed217c;
 }

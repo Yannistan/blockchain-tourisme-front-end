@@ -39,11 +39,18 @@
         font-size: 1.5rem;
       }
     }
+    .reserve {
+      background-color: $orange;
+      &:hover {
+        color: $yellow;
+      }
+    }
     legend {
       color: $white;
       font-size: 1rem;
       font-style: italic;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
+      margin-top: 1.2rem;
     }
     .transport,
     .travel,
@@ -69,7 +76,6 @@
       text-align: center;
       background-color: $transparentWhite2;
       padding: 0.5rem;
-      margin-top: 1.5rem;
       margin-bottom: 1rem;
       border-radius: 3px;
       span {
@@ -89,11 +95,6 @@
         font-weight: bold;
       }
     }
-    .buttons {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.7rem;
-    }
     button {
       width: 100%;
       padding: 0.5rem;
@@ -102,34 +103,22 @@
       font-size: 1rem;
       font-weight: bold;
       border-radius: 3px;
-      &:nth-child(1) {
-        // GET ID
-        background: $black;
-        &:hover {
-          color: $yellow;
-        }
+      background-color: $black;
+    }
+    .getters {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+      margin-bottom: 1rem;
+      &:hover {
+        color: $yellow;
       }
-      &:nth-child(2) {
-        // RESERVE
-        background-color: $orange;
-        &:hover {
-          color: $yellow;
-        }
-      }
-      &:nth-child(3) {
-        // GET PRICE
-        background: $black;
-        &:hover {
-          color: $yellow;
-        }
-      }
-      &:nth-child(4) {
-        // PAY
-        background: $red;
-        &:hover {
-          background-color: $yellow;
-          color: $red;
-        }
+    }
+    .pay {
+      background: $red;
+      &:hover {
+        background-color: $yellow;
+        color: $red;
       }
     }
   }
