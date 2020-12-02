@@ -7,6 +7,7 @@ import { TourismeContext } from "../App";
 
 const Reservation = () => {
   const { destination } = useContext(DestinationContext);
+  const [reserved, setReserved] = useState(false);
   const Tourisme = useContext(TourismeContext);
   const [inputTransport, setInputTransport] = useState();
   const [inputAccommodation, setInputAccommodation] = useState("");
@@ -18,6 +19,7 @@ const Reservation = () => {
   const [AddressPayment, setAddressPayment] = useState("0x0");
 
   const handleOnClickSaveOffer = async () => {
+    setReserved(true);
     const res = await Tourisme.choose_offer(
       destination,
       inputAccommodation,
@@ -28,7 +30,7 @@ const Reservation = () => {
     );
   };
 
-    const handleOnClickGetID = async () => {
+  const handleOnClickGetID = async () => {
     const res = await Tourisme.getofferID();
     setReserveID(res.toString());
   };
@@ -46,7 +48,7 @@ const Reservation = () => {
     await Tourisme.reserveByClient(ReserveID, AddressPayment);
   };
 
- /* const handleOnClickGetID = async () => {
+  /* const handleOnClickGetID = async () => {
     const res = await Tourisme.choose_offer(
       destination,
       inputAccommodation,
@@ -57,6 +59,10 @@ const Reservation = () => {
     );
     setReserveID(res.toString());
   }; */
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   return (
     <>
@@ -71,9 +77,11 @@ const Reservation = () => {
                 <p>
                   Your trip to <span>{destination}</span>
                   <sup>
-                    <Link to="/travels" className="edit">
-                      (edit)
-                    </Link>
+                    {!reserved && (
+                      <Link to="/travels" className="edit">
+                        (edit)
+                      </Link>
+                    )}
                   </sup>
                 </p>
               ) : (
@@ -81,8 +89,28 @@ const Reservation = () => {
                   First, please select a <Link to="/travels">destination</Link>
                 </p>
               )}
+              {destination !== undefined && !reserved && (
+                <button
+                  type="button"
+                  title="Send reservation to contract"
+                  onClick={handleOnClickSaveOffer}
+                  className="reserve"
+                >
+                  Reserve
+                </button>
+              )}
+              {reserved && (
+                <button
+                  type="button"
+                  title="Cancel your reservation"
+                  onClick={refreshPage}
+                  className="cancel"
+                >
+                  Cancel reservation
+                </button>
+              )}
               {destination !== undefined && (
-                <legend>Please select options</legend>
+                <legend>Please select options :</legend>
               )}
               <div className="transport">
                 <input
@@ -149,13 +177,7 @@ const Reservation = () => {
                 />
                 <label htmlFor="tours">Tours</label>
               </div>
-              <div className="id">
-                Reservation ID : <span>{ReserveID}</span>
-              </div>
-              <div className="total">
-                Total amount : <span>{getPrice} </span>TRM
-              </div>
-              <div className="buttons">
+              <div className="getters">
                 <button
                   disabled={destination === undefined}
                   type="button"
@@ -164,14 +186,7 @@ const Reservation = () => {
                 >
                   Get ID
                 </button>
-                <button
-                  disabled={destination === undefined}
-                  type="button"
-                  title="Send reservation to contract"
-                  onClick={handleOnClickSaveOffer}
-                >
-                  Reserve
-                </button>
+
                 <button
                   disabled={destination === undefined}
                   type="button"
@@ -180,14 +195,21 @@ const Reservation = () => {
                 >
                   Get price
                 </button>
-                <button
-                  disabled={destination === undefined}
-                  type="submit"
-                  title="Pay reservation"
-                >
-                  PAY
-                </button>
               </div>
+              <div className="id">
+                Reservation ID : <span>{ReserveID}</span>
+              </div>
+              <div className="total">
+                Total amount : <span>{getPrice} </span>TRM
+              </div>
+              <button
+                disabled={destination === undefined}
+                type="submit"
+                title="Pay reservation"
+                className="pay"
+              >
+                PAY
+              </button>
             </form>
           </div>
         </div>
