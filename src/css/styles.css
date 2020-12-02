@@ -140,7 +140,7 @@ nav a:hover:nth-child(2) {
 }
 
 .loginForm .head .selected {
-  color: red;
+  color: #ed217c;
   font-size: 1.4rem;
   font-style: italic;
 }
@@ -425,6 +425,21 @@ nav a:hover:nth-child(2) {
 .reservation .form .tours label {
   color: #f4fffd;
   font-size: 1.2rem;
+}
+
+.reservation .form .id {
+  color: #f4fffd;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+}
+
+.reservation .form .id span {
+  font-weight: bold;
 }
 
 .reservation .form .total {

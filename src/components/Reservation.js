@@ -18,13 +18,15 @@ const Reservation = () => {
   const [AddressPayment, setAddressPayment] = useState("0x0");
 
   const handleOnClickSaveOffer = async () => {
-    await Tourisme.choose_offer(
-      inputTransport,
+    const res = await Tourisme.choose_offer(
+      destination,
       inputAccommodation,
+      inputTransport,
       inputCatering,
       inputActivities,
       inputTours
     );
+    setReserveID(res.toString());
   };
 
   const handleOnClickGetPrice = async () => {
@@ -44,6 +46,18 @@ const Reservation = () => {
 
   const handleOnClickPay = async () => {
     await Tourisme.reserveByClient(ReserveID, AddressPayment);
+  };
+
+  const handleOnClickGetID = async () => {
+    const res = await Tourisme.choose_offer(
+      destination,
+      inputAccommodation,
+      inputTransport,
+      inputCatering,
+      inputActivities,
+      inputTours
+    );
+    setReserveID(res.toString());
   };
 
   return (
@@ -137,11 +151,14 @@ const Reservation = () => {
                 />
                 <label htmlFor="tours">Tours</label>
               </div>
+              <div className="id">
+                Reservation ID : <span>{ReserveID}</span>
+              </div>
               <div className="total">
                 Total amount : <span>{getPrice} </span>TKN
               </div>
               <div className="buttons">
-                <button type="button" onClick={handleOnClickGetPrice}>
+                <button type="button" onClick={handleOnClickSaveOffer}>
                   Reserve
                 </button>
                 <button type="button" onClick={handleOnClickGetPrice}>
