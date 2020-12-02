@@ -267,6 +267,13 @@ export const Tourisme_abi = [
       }
     ],
     "name": "choose_offer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getofferID",
     "outputs": [
       {
         "internalType": "uint256",
@@ -274,7 +281,7 @@ export const Tourisme_abi = [
         "type": "uint256"
       }
     ],
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function"
   },
   {

@@ -26,8 +26,13 @@ const Reservation = () => {
       inputActivities,
       inputTours
     );
-    setReserveID(res.toString());
+    
   };
+
+  const handleOnClickGetID = async () => {
+    const res = await Tourisme.getofferID();
+    setReserveID(res.toString());
+  }
 
   
 
@@ -136,12 +141,17 @@ const Reservation = () => {
                 />
                 <label htmlFor="tours">Tours</label>
               </div>
+              <div className="id">Reservation ID : <span>{ReserveID}</span> 
+                         </div>
               <div className="total">
                 Total amount : <span>{getPrice} </span>TRM
               </div>
               <div className="buttons">
                 <button type="button" onClick={handleOnClickSaveOffer}>
                   Reserve
+                </button>
+                <button type="button" onClick={handleOnClickGetID}>
+                  GetID
                 </button>
                 <button type="button" onClick={handleOnClickGetPrice}>
                   Get price
