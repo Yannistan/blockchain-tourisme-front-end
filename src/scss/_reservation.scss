@@ -63,12 +63,13 @@
       }
     }
     .id {
-      color: $white;
+      color: $black;
       text-transform: uppercase;
       font-size: 1.1rem;
       text-align: center;
-      background-color: $transparentWhite;
+      background-color: $transparentWhite2;
       padding: 0.5rem;
+      margin-top: 1.5rem;
       margin-bottom: 1rem;
       border-radius: 3px;
       span {
@@ -76,13 +77,13 @@
       }
     }
     .total {
-      color: $white;
+      color: $black;
       text-transform: uppercase;
       font-size: 1.1rem;
       text-align: center;
-      background-color: $transparentWhite;
+      background-color: $transparentWhite2;
       padding: 0.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       border-radius: 3px;
       span {
         font-weight: bold;

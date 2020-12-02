@@ -157,6 +157,7 @@ const Reservation = () => {
               </div>
               <div className="buttons">
                 <button
+                  disabled={destination === undefined}
                   type="button"
                   title="Get reservation ID"
                   onClick={handleOnClickGetID}
@@ -164,6 +165,7 @@ const Reservation = () => {
                   Get ID
                 </button>
                 <button
+                  disabled={destination === undefined}
                   type="button"
                   title="Send reservation to contract"
                   onClick={handleOnClickSaveOffer}
@@ -171,13 +173,18 @@ const Reservation = () => {
                   Reserve
                 </button>
                 <button
+                  disabled={destination === undefined}
                   type="button"
                   title="Get reservation amount"
                   onClick={handleOnClickGetPrice}
                 >
                   Get price
                 </button>
-                <button type="submit" title="Pay reservation">
+                <button
+                  disabled={destination === undefined}
+                  type="submit"
+                  title="Pay reservation"
+                >
                   PAY
                 </button>
               </div>

@@ -428,12 +428,13 @@ nav a:hover:nth-child(2) {
 }
 
 .reservation .form .id {
-  color: #f4fffd;
+  color: #2d3047;
   text-transform: uppercase;
   font-size: 1.1rem;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 0.5rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
   border-radius: 3px;
 }
@@ -443,13 +444,13 @@ nav a:hover:nth-child(2) {
 }
 
 .reservation .form .total {
-  color: #f4fffd;
+  color: #2d3047;
   text-transform: uppercase;
   font-size: 1.1rem;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border-radius: 3px;
 }
 
