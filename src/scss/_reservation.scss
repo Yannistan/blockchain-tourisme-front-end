@@ -89,10 +89,11 @@
       }
     }
     .buttons {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
     }
     button {
-      margin-top: 0.5rem;
       width: 100%;
       padding: 0.5rem;
       border: none;
@@ -101,23 +102,29 @@
       font-weight: bold;
       border-radius: 3px;
       &:nth-child(1) {
-        background: $orange;
+        // GET ID
+        background: $black;
         &:hover {
-          background-color: $green;
           color: $yellow;
         }
       }
       &:nth-child(2) {
-        background: $orange;
-        margin-left: 1rem;
+        // RESERVE
+        background-color: $orange;
         &:hover {
-          background-color: $yellow;
-          color: $red;
+          color: $yellow;
         }
       }
       &:nth-child(3) {
+        // GET PRICE
+        background: $black;
+        &:hover {
+          color: $yellow;
+        }
+      }
+      &:nth-child(4) {
+        // PAY
         background: $red;
-        margin-left: 1rem;
         &:hover {
           background-color: $yellow;
           color: $red;

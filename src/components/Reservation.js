@@ -18,22 +18,20 @@ const Reservation = () => {
   const [AddressPayment, setAddressPayment] = useState("0x0");
 
   const handleOnClickSaveOffer = async () => {
-  const res =  await Tourisme.choose_offer(
-      destination, 
+    const res = await Tourisme.choose_offer(
+      destination,
       inputAccommodation,
       inputTransport,
       inputCatering,
       inputActivities,
       inputTours
     );
-  
   };
 
-/*   const handleOnClickGetID = async () => {
+  /*   const handleOnClickGetID = async () => {
     const res = await Tourisme.getofferID();
     setReserveID(res.toString());
   } */
-
 
   const handleOnClickGetPrice = async () => {
     try {
@@ -43,7 +41,6 @@ const Reservation = () => {
       console.log(e.message);
     }
   };
-
 
   const handleOnClickPay = async () => {
     await Tourisme.reserveByClient(ReserveID, AddressPayment);
@@ -159,16 +156,30 @@ const Reservation = () => {
                 Total amount : <span>{getPrice} </span>TRM
               </div>
               <div className="buttons">
-                <button type="button" onClick={handleOnClickSaveOffer}>
+                <button
+                  type="button"
+                  title="Get reservation ID"
+                  onClick={handleOnClickGetID}
+                >
+                  Get ID
+                </button>
+                <button
+                  type="button"
+                  title="Send reservation to contract"
+                  onClick={handleOnClickSaveOffer}
+                >
                   Reserve
                 </button>
-                <button type="button" onClick={handleOnClickGetID}>
-                  GetID
-                </button>
-                <button type="button" onClick={handleOnClickGetPrice}>
+                <button
+                  type="button"
+                  title="Get reservation amount"
+                  onClick={handleOnClickGetPrice}
+                >
                   Get price
                 </button>
-                <button type="submit">PAY</button>
+                <button type="submit" title="Pay reservation">
+                  PAY
+                </button>
               </div>
             </form>
           </div>

@@ -458,13 +458,14 @@ nav a:hover:nth-child(2) {
 }
 
 .reservation .form .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
 }
 
 .reservation .form button {
-  margin-top: 0.5rem;
   width: 100%;
   padding: 0.5rem;
   border: none;
@@ -475,30 +476,34 @@ nav a:hover:nth-child(2) {
 }
 
 .reservation .form button:nth-child(1) {
-  background: #dd7104;
+  background: #2d3047;
 }
 
 .reservation .form button:nth-child(1):hover {
-  background-color: #6aff0d;
   color: #fffd82;
 }
 
 .reservation .form button:nth-child(2) {
-  background: #dd7104;
-  margin-left: 1rem;
+  background-color: #dd7104;
 }
 
 .reservation .form button:nth-child(2):hover {
-  background-color: #fffd82;
-  color: #ed217c;
+  color: #fffd82;
 }
 
 .reservation .form button:nth-child(3) {
-  background: #ed217c;
-  margin-left: 1rem;
+  background: #2d3047;
 }
 
 .reservation .form button:nth-child(3):hover {
+  color: #fffd82;
+}
+
+.reservation .form button:nth-child(4) {
+  background: #ed217c;
+}
+
+.reservation .form button:nth-child(4):hover {
   background-color: #fffd82;
   color: #ed217c;
 }
