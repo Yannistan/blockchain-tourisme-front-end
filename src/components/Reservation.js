@@ -18,7 +18,7 @@ const Reservation = () => {
   const [AddressPayment, setAddressPayment] = useState("0x0");
 
   const handleOnClickSaveOffer = async () => {
-    await Tourisme.choose_offer(
+  const res =  await Tourisme.choose_offer(
       destination, 
       inputAccommodation,
       inputTransport,
@@ -26,7 +26,10 @@ const Reservation = () => {
       inputActivities,
       inputTours
     );
+    setReserveID(res.toString());
   };
+
+  
 
   const handleOnClickGetPrice = async () => {
     try {
@@ -36,6 +39,7 @@ const Reservation = () => {
       console.log(e.message);
     }
   };
+
 
   const handleOnClickPay = async () => {
     await Tourisme.reserveByClient(ReserveID, AddressPayment);
