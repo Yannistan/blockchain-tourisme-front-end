@@ -1,7 +1,4 @@
-export const Tourisme_address = "0x219100807213f4cA85f01F52c5e8913F453D6Df4";
-//export const Tourisme_address = "0xc5b5181f9F9066bb7BC1611B95615AB797E91f69";
-
-export const Tourisme_abi = [
+[
   {
     "inputs": [
       {
@@ -69,7 +66,8 @@ export const Tourisme_abi = [
       }
     ],
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": true
   },
   {
     "inputs": [
@@ -93,7 +91,8 @@ export const Tourisme_abi = [
       }
     ],
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": true
   },
   {
     "inputs": [],
@@ -106,7 +105,8 @@ export const Tourisme_abi = [
       }
     ],
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": true
   },
   {
     "inputs": [],
@@ -161,19 +161,6 @@ export const Tourisme_abi = [
   },
   {
     "inputs": [],
-    "name": "confirmRegister",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
     "name": "clientId",
     "outputs": [
       {
@@ -183,31 +170,8 @@ export const Tourisme_abi = [
       }
     ],
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "_email",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "_password",
-        "type": "string"
-      }
-    ],
-    "name": "login",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": true
   },
   {
     "inputs": [
@@ -253,7 +217,8 @@ export const Tourisme_abi = [
       }
     ],
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": true
   },
   {
     "inputs": [
@@ -304,7 +269,8 @@ export const Tourisme_abi = [
       }
     ],
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": true
   },
   {
     "inputs": [
@@ -323,7 +289,8 @@ export const Tourisme_abi = [
       }
     ],
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": true
   },
   {
     "inputs": [
@@ -354,7 +321,8 @@ export const Tourisme_abi = [
       }
     ],
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": true
   },
   {
     "inputs": [
