@@ -43,15 +43,15 @@ const LoginForm = () => {
             <legend>{login ? "Login" : "Register"}</legend>
             <label htmlFor="email"></label>
             <input
-              type="text"
+              type="email"
               id="email"
               name="email"
               required
               placeholder="Email"
             />
-            <label htmlFor="email"></label>
+            <label htmlFor="password"></label>
             <input
-              type="text"
+              type="password"
               id="password"
               name="password"
               required
