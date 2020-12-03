@@ -45,7 +45,7 @@ const Reservation = () => {
   };
 
   const handleOnClickPay = async () => {
-    await Tourisme.reserveByClient(ReserveID, AddressPayment);
+    await Tourisme.reserveByClient(ReserveID);
   };
 
   /* const handleOnClickGetID = async () => {
