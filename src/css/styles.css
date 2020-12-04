@@ -128,13 +128,6 @@ nav a:hover:nth-child(2) {
   display: inline-block;
 }
 
-@media screen and (max-width: 640px) {
-  .web3off {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-}
-
 .web3off .redDot {
   margin: 0 0.5rem 0.1rem 0;
   width: 1rem;

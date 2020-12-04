@@ -37,7 +37,6 @@
 }
 
 .web3off {
-  @include sm-screens-small-margins;
   color: $red;
   font-weight: bold;
   font-style: italic;
