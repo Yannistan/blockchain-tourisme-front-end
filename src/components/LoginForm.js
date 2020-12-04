@@ -4,12 +4,14 @@ import { TourismeContext } from "../App";
 
 const LoginForm = () => {
   const Tourisme = useContext(TourismeContext);
-  const [register, setRegister] = useState(false);
   const [login, setLogIn] = useState(true);
   const [getLogin, setGetLogin] = useState(false);
   const [getRegister, setGetRegister] = useState(false);
+  const [register, setRegister] = useState(false);
+  
+  const [address, setAddress] = useState('0x0');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
 
   const handleLoginClick = () => {
     setLogIn(true);
@@ -21,13 +23,15 @@ const LoginForm = () => {
     setRegister(true);
   };
 
+  const handleIsRegisteredClick = async () => {
+    const res = await Tourisme.IsRegistered(address);
+    setRegister(res.toString());
+  };
+
   const handleRegister = async () => {
     
-      const res = await Tourisme.register(email, password);
-    
-    // setGetRegister(res.toString());
-     // console.log(setGetRegister);
-    
+      const res = await Tourisme.register(email, name);
+  
   };
 
   const handleConfirmRegister = async () => {
@@ -39,8 +43,6 @@ const LoginForm = () => {
     const res = await Tourisme.login();
     setGetLogin(res.toString());
   }
-  
-  // console.log("login :", login, "register :", register);
 
   return (
     <section className="loginForm">
@@ -79,15 +81,15 @@ const LoginForm = () => {
               }}
 
             />
-            <label htmlFor="password"></label>
+            <label htmlFor="name"></label>
             <input
-              type="password"
-              id="password"
+              type="name"
+              id="name"
               name="password"
               required
-              placeholder="Password"
+              placeholder="name"
               onChange={(e) => {
-                setPassword(e.currentTarget.value);
+                setName(e.currentTarget.value);
               }}
             />
             <button type="button" onClick={handleRegister}>Connect</button>
