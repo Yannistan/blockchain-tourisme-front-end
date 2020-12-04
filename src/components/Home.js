@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 //import { ethers } from 'ethers'
 import Register from "./Register";
 import Welcome from "./Welcome";
@@ -17,10 +17,14 @@ const Home = () => {
   const [register, setRegister] = useState(false);
   const [address, setAddress] = useState("0x0");
 
-  const handleIsRegisteredClick = async () => {
-    const res = await Tourisme.IsRegistered(address);
-    setRegister(res.toString());
-  };
+  useEffect(() => {
+    const isRegistered = async () => {
+      const res = await Tourisme.IsRegistered(address);
+      setRegister(res.toString());
+    };
+  }, []);
+
+  console.info("Registered ? ", register);
 
   return (
     <>
@@ -32,7 +36,7 @@ const Home = () => {
       ) : (
         <>
           <p className="connectWeb3P">
-            To use this app you need to
+            To use this app you need to{" "}
             <button className="connectWeb3Btn" onClick={login}>
               Connect Web 3
             </button>
@@ -44,7 +48,11 @@ const Home = () => {
           </span>
         </>
       )}
-      {register ? <Register /> : <Welcome />}
+      {register ? (
+        <Register register={register} setRegister={setRegister} />
+      ) : (
+        <Welcome />
+      )}
       <Web3Info />
     </>
   );

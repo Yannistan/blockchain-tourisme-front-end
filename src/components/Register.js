@@ -2,9 +2,8 @@ import React, { useContext, useState } from "react";
 //import { DestinationContext } from "../context/DestinationContext";
 import { TourismeContext } from "../App";
 
-const Register = () => {
+const Register = ({ register, setRegister }) => {
   const Tourisme = useContext(TourismeContext);
-  const [register, setRegister] = useState(false);
   const [address, setAddress] = useState("0x0");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");

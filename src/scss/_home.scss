@@ -1,6 +1,6 @@
 .connectWeb3P {
-  @include sm-screens-small-margins;
-  margin: 3rem 0 0 3rem;
+  @include sm-screens-third-titles;
+  margin: 3rem 3rem 0 3rem;
   color: $white;
   border: 1px solid $white;
   font-size: 1rem;
@@ -9,7 +9,7 @@
   padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: $transparentBlack;
   .connectWeb3Btn {
-    @include sm-screens-small-margins;
+    @include sm-screens-third-titles;
     font-style: italic;
     background-color: transparent;
     color: $red;
@@ -17,7 +17,6 @@
     font-weight: bold;
     font-size: 1rem;
     text-transform: uppercase;
-    margin-left: 0.3rem;
     &:hover {
       color: $green;
     }

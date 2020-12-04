@@ -73,7 +73,7 @@ nav a:hover:nth-child(2) {
 }
 
 .connectWeb3P {
-  margin: 3rem 0 0 3rem;
+  margin: 3rem 3rem 0 3rem;
   color: #f4fffd;
   border: 1px solid #f4fffd;
   font-size: 1rem;
@@ -85,8 +85,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .connectWeb3P {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -98,13 +97,11 @@ nav a:hover:nth-child(2) {
   font-weight: bold;
   font-size: 1rem;
   text-transform: uppercase;
-  margin-left: 0.3rem;
 }
 
 @media screen and (max-width: 640px) {
   .connectWeb3P .connectWeb3Btn {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -700,7 +697,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .introText .links a {
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 0.5rem;
   }
 }
 
