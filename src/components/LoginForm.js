@@ -5,40 +5,23 @@ import { TourismeContext } from "../App";
 const LoginForm = () => {
   const Tourisme = useContext(TourismeContext);
   const [register, setRegister] = useState(false);
-  const [login, setLogIn] = useState(true);
-  const [getLogin, setGetLogin] = useState(false);
   const [getRegister, setGetRegister] = useState(false);
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLoginClick = () => {
-    setLogIn(true);
-    setRegister(false);
-  };
-
-  const handleRegisterClick = () => {
-    setLogIn(false);
-    setRegister(true);
-  };
+  const [address, setAddress] = useState("0x0");
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
 
   const handleRegister = async () => {
     const res = await Tourisme.register(email, password);
-
     // setGetRegister(res.toString());
     // console.log(setGetRegister);
   };
 
-  const handleConfirmRegister = async () => {
-    const res = await Tourisme.confirmRegister();
-    setGetRegister(res.toString());
+  const handleIsRegisteredClick = async () => {
+    const res = await Tourisme.IsRegistered(address);
+    setRegister(res.toString());
   };
-
-  const handleGetLogin = async () => {
-    const res = await Tourisme.login();
-    setGetLogin(res.toString());
-  };
-
-  // console.log("login :", login, "register :", register);
 
   return (
     <section className="loginForm">
@@ -46,24 +29,11 @@ const LoginForm = () => {
         <div className="col-sm-12 col-md-8 col-lg-5">
           <div className="head">
             <div>
-              <button
-                className={`login ${login && "selected"}`}
-                onClick={handleLoginClick}
-              >
-                Login
-              </button>
-            </div>
-            <div>
-              <button
-                className={`register ${register && "selected"}`}
-                onClick={handleRegisterClick}
-              >
-                Register
-              </button>
+              <h3 className="register">Register</h3>
             </div>
           </div>
           <form className="form">
-            <legend>{login ? "Login" : "Register"}</legend>
+            <legend>Register</legend>
             <label htmlFor="email"></label>
             <input
               type="email"
@@ -89,12 +59,6 @@ const LoginForm = () => {
             <button type="button" onClick={handleRegister}>
               Connect
             </button>
-            <button type="button" onClick={handleConfirmRegister}>
-              Registered?
-            </button>
-            <div>
-              <h3>IsRegistered ?{getRegister}</h3>
-            </div>
           </form>
         </div>
       </div>

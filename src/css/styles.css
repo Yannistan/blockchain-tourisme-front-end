@@ -19,6 +19,12 @@ header .logo a {
   margin-left: 1.5rem;
 }
 
+@media screen and (max-width: 640px) {
+  header .logo a {
+    font-size: 2rem;
+  }
+}
+
 header .logo a:hover {
   color: #ed217c;
 }
@@ -48,15 +54,11 @@ nav a {
 }
 
 nav a:hover {
-  color: #ed217c;
-}
-
-nav a:hover:nth-child(2) {
   color: #dd7104;
 }
 
-nav a:hover:nth-child(3) {
-  color: #fffd82;
+nav a:hover:nth-child(2) {
+  color: #ed217c;
 }
 
 .menu a {
@@ -75,6 +77,13 @@ nav a:hover:nth-child(3) {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+@media screen and (max-width: 640px) {
+  .connectWeb3P {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .connectWeb3P .connectWeb3Btn {
   font-style: italic;
   background-color: transparent;
@@ -84,6 +93,13 @@ nav a:hover:nth-child(3) {
   font-size: 1rem;
   text-transform: uppercase;
   margin-left: 0.3rem;
+}
+
+@media screen and (max-width: 640px) {
+  .connectWeb3P .connectWeb3Btn {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .connectWeb3P .connectWeb3Btn:hover {
@@ -112,76 +128,16 @@ nav a:hover:nth-child(3) {
   display: inline-block;
 }
 
+@media screen and (max-width: 640px) {
+  .web3off {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .web3off .redDot {
   margin: 0 0.5rem 0.1rem 0;
   width: 1rem;
-}
-
-.loginForm {
-  margin: 2rem 2rem 2rem 2rem;
-  color: #f4fffd;
-  font-family: "Work Sans", sans-serif;
-}
-
-.loginForm .head {
-  background-color: #2d3047;
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.loginForm .head .login,
-.loginForm .head .register {
-  background-color: #2d3047;
-  border: none;
-  color: #f4fffd;
-}
-
-.loginForm .head .selected {
-  color: #ed217c;
-  font-size: 1.4rem;
-  font-style: italic;
-}
-
-.loginForm .form {
-  color: #2d3047;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 1rem;
-}
-
-.loginForm .form legend {
-  color: #f4fffd;
-  font-size: 1rem;
-  font-style: italic;
-}
-
-.loginForm .form input {
-  height: 2rem;
-  width: 100%;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-}
-
-.loginForm .form button {
-  margin-top: 0.5rem;
-  width: 100%;
-  padding: 0.5rem;
-  background: #ed217c;
-  border: none;
-  color: #f4fffd;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 3px;
-}
-
-.loginForm .form button:hover {
-  background-color: #dd7104;
 }
 
 .footer {
@@ -358,6 +314,12 @@ nav a:hover:nth-child(3) {
   font-size: 2.5rem;
 }
 
+@media screen and (max-width: 640px) {
+  .reservation .head h2 {
+    font-size: 2rem;
+  }
+}
+
 .reservation .form {
   color: #2d3047;
   background-color: rgba(0, 0, 0, 0.4);
@@ -367,6 +329,12 @@ nav a:hover:nth-child(3) {
 .reservation .form p {
   color: #f4fffd;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 640px) {
+  .reservation .form p {
+    font-size: 1rem;
+  }
 }
 
 .reservation .form p span {
@@ -449,6 +417,16 @@ nav a:hover:nth-child(3) {
   font-size: 1.2rem;
 }
 
+@media screen and (max-width: 640px) {
+  .reservation .form .transport label,
+  .reservation .form .travel label,
+  .reservation .form .catering label,
+  .reservation .form .activities label,
+  .reservation .form .tours label {
+    font-size: 1rem;
+  }
+}
+
 .reservation .form .getters {
   display: -ms-grid;
   display: grid;
@@ -473,6 +451,12 @@ nav a:hover:nth-child(3) {
   border-radius: 3px;
 }
 
+@media screen and (max-width: 640px) {
+  .reservation .form .id {
+    font-size: 1rem;
+  }
+}
+
 .reservation .form .id span {
   font-weight: bold;
 }
@@ -486,6 +470,12 @@ nav a:hover:nth-child(3) {
   padding: 0.5rem;
   margin-bottom: 1rem;
   border-radius: 3px;
+}
+
+@media screen and (max-width: 640px) {
+  .reservation .form .total {
+    font-size: 1rem;
+  }
 }
 
 .reservation .form .total span {
@@ -566,6 +556,159 @@ nav a:hover:nth-child(3) {
   border-radius: 5px;
   padding: 0 3px 0 3px;
   font-size: 1rem;
+}
+
+.loginForm {
+  margin: 2rem 2rem 2rem 2rem;
+  color: #f4fffd;
+  font-family: "Work Sans", sans-serif;
+}
+
+@media screen and (max-width: 640px) {
+  .loginForm {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.loginForm .head {
+  background-color: #2d3047;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginForm .head .register {
+  font-size: 2.5rem;
+  background-color: #2d3047;
+  border: none;
+  color: #f4fffd;
+  font-family: "Lobster", cursive;
+}
+
+@media screen and (max-width: 640px) {
+  .loginForm .head .register {
+    font-size: 2rem;
+  }
+}
+
+.loginForm .form {
+  color: #2d3047;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+}
+
+.loginForm .form legend {
+  color: #f4fffd;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.loginForm .form input {
+  height: 2rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+.loginForm .form button {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  background: #ed217c;
+  border: none;
+  color: #f4fffd;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.loginForm .form button:hover {
+  background-color: #dd7104;
+}
+
+.introText {
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: "Work Sans", sans-serif;
+  margin: 3rem 3rem 3rem 3rem;
+  padding: 1rem;
+  color: #2d3047;
+}
+
+@media screen and (max-width: 640px) {
+  .introText {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.introText h2 {
+  font-size: 3.5rem;
+}
+
+@media screen and (max-width: 640px) {
+  .introText h2 {
+    font-size: 3rem;
+  }
+}
+
+.introText p {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+@media screen and (max-width: 640px) {
+  .introText p {
+    font-size: 1rem;
+  }
+}
+
+.introText .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.introText .links a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: #2d3047;
+  color: #f4fffd;
+  border: none;
+}
+
+@media screen and (max-width: 640px) {
+  .introText .links a {
+    font-size: 1rem;
+  }
+}
+
+.introText .links a:nth-child(2) {
+  margin-left: 1rem;
+}
+
+.introText .links a:hover {
+  color: #fffd82;
+}
+
+.introText .links a:hover:nth-child(2) {
+  color: #ed217c;
 }
 
 * {

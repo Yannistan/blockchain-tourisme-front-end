@@ -27,14 +27,12 @@ const Header = () => {
         <nav>
           {onlyWidth > 700 ? (
             <>
-              <Link to="/">Login</Link>
               <Link to="/travels">Travels</Link>
               <Link to="/reservation">Reservation</Link>
             </>
           ) : (
             <>
               <div className="menu">
-                <Link to="/">Login</Link>
                 <Link to="/travels">Travels</Link>
                 <Link to="/reservation">Reservation</Link>
               </div>

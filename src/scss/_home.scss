@@ -1,4 +1,5 @@
 .connectWeb3P {
+  @include sm-screens-small-margins;
   margin: 3rem 0 0 3rem;
   color: $white;
   border: 1px solid $white;
@@ -8,6 +9,7 @@
   padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: $transparentBlack;
   .connectWeb3Btn {
+    @include sm-screens-small-margins;
     font-style: italic;
     background-color: transparent;
     color: $red;
@@ -35,6 +37,7 @@
 }
 
 .web3off {
+  @include sm-screens-small-margins;
   color: $red;
   font-weight: bold;
   font-style: italic;
@@ -44,59 +47,5 @@
   .redDot {
     margin: 0 0.5rem 0.1rem 0;
     width: 1rem;
-  }
-}
-
-.loginForm {
-  margin: 2rem 2rem 2rem 2rem;
-  color: $white;
-  font-family: $mainFont;
-  .head {
-    background-color: $black;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    .login,
-    .register {
-      background-color: $black;
-      border: none;
-      color: $white;
-    }
-    .selected {
-      color: $red;
-      font-size: 1.4rem;
-      font-style: italic;
-    }
-  }
-  .form {
-    color: $black;
-    background-color: $transparentBlack;
-    padding: 1rem;
-    legend {
-      color: $white;
-      font-size: 1rem;
-      font-style: italic;
-    }
-    input {
-      height: 2rem;
-      width: 100%;
-      margin-bottom: 0.5rem;
-      padding: 0.5rem;
-    }
-    button {
-      margin-top: 0.5rem;
-      width: 100%;
-      padding: 0.5rem;
-      background: $red;
-      border: none;
-      color: $white;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 3px;
-      &:hover {
-        background-color: $orange;
-      }
-    }
   }
 }

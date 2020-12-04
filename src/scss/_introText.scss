@@ -1,0 +1,44 @@
+.introText {
+  @include sm-screens-small-margins;
+  background-color: $transparentWhite;
+  font-family: $mainFont;
+  margin: 3rem 3rem 3rem 3rem;
+  padding: 1rem;
+  color: $black;
+  h2 {
+    @include sm-screens-titles;
+    font-size: 3.5rem;
+  }
+  p {
+    @include sm-screens-third-titles;
+    font-size: 2rem;
+    font-style: italic;
+  }
+  .links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a {
+      @include sm-screens-third-titles;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-family: $logoFont;
+      padding: 1rem;
+      font-size: 1.5rem;
+      background-color: $black;
+      color: $white;
+      border: none;
+      &:nth-child(2) {
+        margin-left: 1rem;
+      }
+      &:hover {
+        color: $yellow;
+      }
+      &:hover:nth-child(2) {
+        color: $red;
+      }
+    }
+  }
+}

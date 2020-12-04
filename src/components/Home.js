@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 //import { ethers } from 'ethers'
 import LoginForm from "./LoginForm";
-import IntroText from "./IntroText";
+import Welcome from "./Welcome";
 
 import Web3Info from "./Web3Info";
 import { Web3Context } from "../hooks/useWeb3";
@@ -34,8 +34,8 @@ const Home = () => {
         </>
       )}
       <LoginForm />
+      <Welcome />
       <Web3Info />
-      <IntroText />
     </>
   );
 };
