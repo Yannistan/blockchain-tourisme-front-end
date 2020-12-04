@@ -8,8 +8,8 @@ const LoginForm = () => {
   const [login, setLogIn] = useState(true);
   const [getLogin, setGetLogin] = useState(false);
   const [getRegister, setGetRegister] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLoginClick = () => {
     setLogIn(true);
@@ -22,24 +22,22 @@ const LoginForm = () => {
   };
 
   const handleRegister = async () => {
-    
-      const res = await Tourisme.register(email, password);
-    
+    const res = await Tourisme.register(email, password);
+
     // setGetRegister(res.toString());
-     // console.log(setGetRegister);
-    
+    // console.log(setGetRegister);
   };
 
   const handleConfirmRegister = async () => {
     const res = await Tourisme.confirmRegister();
     setGetRegister(res.toString());
-  }
+  };
 
   const handleGetLogin = async () => {
     const res = await Tourisme.login();
     setGetLogin(res.toString());
-  }
-  
+  };
+
   // console.log("login :", login, "register :", register);
 
   return (
@@ -64,8 +62,7 @@ const LoginForm = () => {
               </button>
             </div>
           </div>
-          <form className="form" >
-            
+          <form className="form">
             <legend>{login ? "Login" : "Register"}</legend>
             <label htmlFor="email"></label>
             <input
@@ -77,7 +74,6 @@ const LoginForm = () => {
               onChange={(e) => {
                 setEmail(e.currentTarget.value);
               }}
-
             />
             <label htmlFor="password"></label>
             <input
@@ -90,11 +86,15 @@ const LoginForm = () => {
                 setPassword(e.currentTarget.value);
               }}
             />
-            <button type="button" onClick={handleRegister}>Connect</button>
-            <button type="button" onClick={handleConfirmRegister}>Registered?</button> 
+            <button type="button" onClick={handleRegister}>
+              Connect
+            </button>
+            <button type="button" onClick={handleConfirmRegister}>
+              Registered?
+            </button>
             <div>
-                <p>IsRegistered ?{getRegister}</p>
-              </div>
+              <h3>IsRegistered ?{getRegister}</h3>
+            </div>
           </form>
         </div>
       </div>
