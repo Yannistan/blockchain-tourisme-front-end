@@ -1,22 +1,13 @@
 import React, { useContext, useState } from "react";
-//import { DestinationContext } from "../context/DestinationContext";
 import { TourismeContext } from "../App";
 
-const Register = ({ register, setRegister }) => {
+const Register = () => {
   const Tourisme = useContext(TourismeContext);
-  const [address, setAddress] = useState("0x0");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
 
   const handleRegister = async () => {
-    const res = await Tourisme.register(email, name);
-    // setGetRegister(res.toString());
-    // console.log(setGetRegister);
-  };
-
-  const handleIsRegisteredClick = async () => {
-    const res = await Tourisme.IsRegistered(address);
-    setRegister(res.toString());
+    await Tourisme.register(email, name);
   };
 
   return (

@@ -17,17 +17,18 @@ const Home = () => {
   const [register, setRegister] = useState(false);
   const [address, setAddress] = useState("0x0");
 
-  useEffect(() => {
-    const isRegistered = async () => {
-      const res = await Tourisme.IsRegistered(address);
-      setRegister(res.toString());
-    };
-  }, []);
+  const isRegistered = async () => {
+    const res = await Tourisme.IsRegistered(address);
+    setRegister(res.toString());
+  };
 
   console.info("Registered ? ", register);
 
   return (
     <>
+      <button onClick={isRegistered}>CHECK if registered</button>
+      <p>{register}</p>
+
       {web3State.is_logged ? (
         <span className="web3on">
           <img className="greenDot" alt="web3 connected" src={GreenDot}></img>
@@ -48,11 +49,7 @@ const Home = () => {
           </span>
         </>
       )}
-      {!register ? (
-        <Welcome />
-      ) : (
-        <Register register={register} setRegister={setRegister} />
-      )}
+      {register ? <Welcome /> : <Register />}
       <Web3Info />
     </>
   );
