@@ -49,9 +49,9 @@ const Home = () => {
         </>
       )}
       {register ? (
-        <Register register={register} setRegister={setRegister} />
-      ) : (
         <Welcome />
+      ) : (
+        <Register register={register} setRegister={setRegister} />
       )}
       <Web3Info />
     </>

@@ -47,6 +47,7 @@ nav {
 }
 
 .menu a {
+  @include sm-screens-third-titles;
   font-size: 1rem;
   display: block;
 }

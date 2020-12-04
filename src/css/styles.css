@@ -72,6 +72,12 @@ nav a:hover:nth-child(2) {
   display: block;
 }
 
+@media screen and (max-width: 640px) {
+  .menu a {
+    font-size: 0.8rem;
+  }
+}
+
 .connectWeb3P {
   margin: 3rem 3rem 0 3rem;
   color: #f4fffd;
