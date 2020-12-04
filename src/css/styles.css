@@ -612,10 +612,22 @@ nav a:hover:nth-child(2) {
   padding: 1rem;
 }
 
+@media screen and (max-width: 640px) {
+  .register .form {
+    font-size: 0.8rem;
+  }
+}
+
 .register .form legend {
   color: #f4fffd;
   font-size: 1rem;
   font-style: italic;
+}
+
+@media screen and (max-width: 640px) {
+  .register .form legend {
+    font-size: 0.8rem;
+  }
 }
 
 .register .form input {
@@ -635,6 +647,12 @@ nav a:hover:nth-child(2) {
   font-size: 1rem;
   font-weight: bold;
   border-radius: 3px;
+}
+
+@media screen and (max-width: 640px) {
+  .register .form button {
+    font-size: 0.8rem;
+  }
 }
 
 .register .form button:hover {

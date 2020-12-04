@@ -1,5 +1,6 @@
 .register {
   @include sm-screens-small-margins;
+
   margin: 2rem 2rem 2rem 2rem;
   color: $white;
   font-family: $mainFont;
@@ -19,10 +20,12 @@
     }
   }
   .form {
+    @include sm-screens-third-titles;
     color: $black;
     background-color: $transparentBlack;
     padding: 1rem;
     legend {
+      @include sm-screens-third-titles;
       color: $white;
       font-size: 1rem;
       font-style: italic;
@@ -34,6 +37,7 @@
       padding: 0.5rem;
     }
     button {
+      @include sm-screens-third-titles;
       margin-top: 0.5rem;
       width: 100%;
       padding: 0.5rem;
