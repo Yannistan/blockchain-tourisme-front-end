@@ -48,7 +48,7 @@ const Home = () => {
           </span>
         </>
       )}
-      {register ? (
+      {!register ? (
         <Welcome />
       ) : (
         <Register register={register} setRegister={setRegister} />
