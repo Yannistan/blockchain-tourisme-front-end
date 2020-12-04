@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 //import { DestinationContext } from "../context/DestinationContext";
 import { TourismeContext } from "../App";
 
-const LoginForm = () => {
+const Register = () => {
   const Tourisme = useContext(TourismeContext);
   const [register, setRegister] = useState(false);
   const [getRegister, setGetRegister] = useState(false);
@@ -24,12 +24,12 @@ const LoginForm = () => {
   };
 
   return (
-    <section className="loginForm">
+    <section className="register">
       <div className=" container row">
         <div className="col-sm-12 col-md-8 col-lg-5">
           <div className="head">
             <div>
-              <h3 className="register">Register</h3>
+              <h3 className="registerTitle">Register</h3>
             </div>
           </div>
           <form className="form">
@@ -66,4 +66,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default Register;

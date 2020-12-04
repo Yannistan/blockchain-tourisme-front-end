@@ -15,6 +15,7 @@ header {
     }
   }
   .logoIcon {
+    @include sm-screens-small-width;
     width: 3rem;
     margin: 0 0 0.3rem 1rem;
     filter: invert(1);

@@ -1,4 +1,4 @@
-.loginForm {
+.register {
   @include sm-screens-small-margins;
   margin: 2rem 2rem 2rem 2rem;
   color: $white;
@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    .register {
+    .registerTitle {
       @include sm-screens-secondary-titles;
       font-size: 2.5rem;
       background-color: $black;

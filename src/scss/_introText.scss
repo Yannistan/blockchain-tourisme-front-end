@@ -6,7 +6,7 @@
   padding: 1rem;
   color: $black;
   h2 {
-    @include sm-screens-titles;
+    @include sm-screens-secondary-titles;
     font-size: 3.5rem;
   }
   p {
@@ -19,6 +19,7 @@
     justify-content: space-around;
     align-items: center;
     a {
+      @include sm-screens-small-paddings;
       @include sm-screens-third-titles;
       text-decoration: none;
       display: block;

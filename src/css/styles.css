@@ -36,6 +36,12 @@ header .logoIcon {
           filter: invert(1);
 }
 
+@media screen and (max-width: 640px) {
+  header .logoIcon {
+    width: 1.5rem;
+  }
+}
+
 header a {
   font-family: "Work Sans", sans-serif;
   color: #f4fffd;
@@ -152,6 +158,12 @@ nav a:hover:nth-child(2) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 640px) {
+  .footer {
+    font-size: 0.8rem;
+  }
 }
 
 .travel {
@@ -326,7 +338,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .reservation .form p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -416,7 +428,7 @@ nav a:hover:nth-child(2) {
   .reservation .form .catering label,
   .reservation .form .activities label,
   .reservation .form .tours label {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -446,7 +458,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .reservation .form .id {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -467,7 +479,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .reservation .form .total {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -551,20 +563,20 @@ nav a:hover:nth-child(2) {
   font-size: 1rem;
 }
 
-.loginForm {
+.register {
   margin: 2rem 2rem 2rem 2rem;
   color: #f4fffd;
   font-family: "Work Sans", sans-serif;
 }
 
 @media screen and (max-width: 640px) {
-  .loginForm {
+  .register {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
 }
 
-.loginForm .head {
+.register .head {
   background-color: #2d3047;
   padding: 1rem;
   display: -webkit-box;
@@ -577,7 +589,7 @@ nav a:hover:nth-child(2) {
           align-items: center;
 }
 
-.loginForm .head .register {
+.register .head .registerTitle {
   font-size: 2.5rem;
   background-color: #2d3047;
   border: none;
@@ -586,31 +598,31 @@ nav a:hover:nth-child(2) {
 }
 
 @media screen and (max-width: 640px) {
-  .loginForm .head .register {
+  .register .head .registerTitle {
     font-size: 2rem;
   }
 }
 
-.loginForm .form {
+.register .form {
   color: #2d3047;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 1rem;
 }
 
-.loginForm .form legend {
+.register .form legend {
   color: #f4fffd;
   font-size: 1rem;
   font-style: italic;
 }
 
-.loginForm .form input {
+.register .form input {
   height: 2rem;
   width: 100%;
   margin-bottom: 0.5rem;
   padding: 0.5rem;
 }
 
-.loginForm .form button {
+.register .form button {
   margin-top: 0.5rem;
   width: 100%;
   padding: 0.5rem;
@@ -622,7 +634,7 @@ nav a:hover:nth-child(2) {
   border-radius: 3px;
 }
 
-.loginForm .form button:hover {
+.register .form button:hover {
   background-color: #dd7104;
 }
 
@@ -647,7 +659,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .introText h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -658,7 +670,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .introText p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -688,7 +700,13 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .introText .links a {
-    font-size: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .introText .links a {
+    font-size: 0.8rem;
   }
 }
 

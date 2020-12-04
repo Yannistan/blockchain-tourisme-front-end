@@ -13,7 +13,7 @@ const Welcome = () => {
           </div>
           <div className="col-lg-6 links">
             <Link to="/travels">Destinations</Link>
-            <Link to="/travels">Your balance</Link>
+            <Link to="/balance">Your balance</Link>
           </div>
         </div>
       </div>
