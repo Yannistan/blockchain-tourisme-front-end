@@ -5,15 +5,12 @@ import { TourismeContext } from "../App";
 const Register = () => {
   const Tourisme = useContext(TourismeContext);
   const [register, setRegister] = useState(false);
-  const [getRegister, setGetRegister] = useState(false);
-  const [password, setPassword] = useState("");
-
   const [address, setAddress] = useState("0x0");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
 
   const handleRegister = async () => {
-    const res = await Tourisme.register(email, password);
+    const res = await Tourisme.register(email, name);
     // setGetRegister(res.toString());
     // console.log(setGetRegister);
   };
@@ -34,6 +31,17 @@ const Register = () => {
           </div>
           <form className="form">
             <legend>Register</legend>
+            <label htmlFor="name"></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Full name"
+              onChange={(e) => {
+                setName(e.currentTarget.value);
+              }}
+            />
             <label htmlFor="email"></label>
             <input
               type="email"
@@ -45,19 +53,9 @@ const Register = () => {
                 setEmail(e.currentTarget.value);
               }}
             />
-            <label htmlFor="password"></label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              required
-              placeholder="Password"
-              onChange={(e) => {
-                setPassword(e.currentTarget.value);
-              }}
-            />
+
             <button type="button" onClick={handleRegister}>
-              Connect
+              Register
             </button>
           </form>
         </div>

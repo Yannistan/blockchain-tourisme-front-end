@@ -1,16 +1,27 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 //import { ethers } from 'ethers'
 import Register from "./Register";
 import Welcome from "./Welcome";
 
 import Web3Info from "./Web3Info";
+
 import { Web3Context } from "../hooks/useWeb3";
+import { TourismeContext } from "../App";
 
 import GreenDot from "../images/green_dot.gif";
 import RedDot from "../images/red_dot.png";
 
 const Home = () => {
   const [web3State, login] = useContext(Web3Context);
+  const Tourisme = useContext(TourismeContext);
+  const [register, setRegister] = useState(false);
+  const [address, setAddress] = useState("0x0");
+
+  const handleIsRegisteredClick = async () => {
+    const res = await Tourisme.IsRegistered(address);
+    setRegister(res.toString());
+  };
+
   return (
     <>
       {web3State.is_logged ? (
@@ -33,8 +44,7 @@ const Home = () => {
           </span>
         </>
       )}
-      <Register />
-      <Welcome />
+      {register ? <Register /> : <Welcome />}
       <Web3Info />
     </>
   );
