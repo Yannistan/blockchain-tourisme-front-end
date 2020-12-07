@@ -11,13 +11,13 @@ import { TourismeContext } from "../App";
 import GreenDot from "../images/green_dot.gif";
 import RedDot from "../images/red_dot.png";
 
-const Home = () => {
+const Home = ({ name, email }) => {
   const [web3State, login] = useContext(Web3Context);
   const Tourisme = useContext(TourismeContext);
   const [register, setRegister] = useState(false);
   const [address, setAddress] = useState("0x0");
 
-  const isRegistered = async () => {
+  const handleIsRegistered = async () => {
     const res = await Tourisme.IsRegistered(address);
     setRegister(res.toString());
   };
@@ -56,13 +56,16 @@ const Home = () => {
             <div className="col-12">
               <input
                 type="text"
-                placeholder="0x0..."
+                placeholder="0x0"
                 id="address"
                 name="address"
+                onChange={(e) => setAddress(e.target.value)}
                 required
               ></input>
             </div>
-            <button type="submit">Go</button>
+            <button type="button" onClick={handleIsRegistered}>
+              Go
+            </button>
           </form>
         </div>
       </div>
