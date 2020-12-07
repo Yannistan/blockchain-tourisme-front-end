@@ -6,7 +6,7 @@
   padding: 1rem;
   color: $black;
   h2 {
-    @include sm-screens-secondary-titles;
+    @include sm-screens-titles;
     font-size: 3.5rem;
   }
   p {

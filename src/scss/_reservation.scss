@@ -17,7 +17,6 @@
     color: $black;
     background-color: $transparentBlack;
     padding: 1rem;
-
     p {
       @include sm-screens-third-titles;
       color: $white;
@@ -42,25 +41,12 @@
         font-size: 1.5rem;
       }
     }
-    .reserve {
-      background-color: $orange;
-      &:hover {
-        color: $yellow;
-      }
-    }
-    .cancel {
-      background-color: $orange;
-      &:hover {
-        background-color: $red;
-        color: $yellow;
-      }
-    }
+
     legend {
       color: $white;
       font-size: 1rem;
       font-style: italic;
       margin-bottom: 1.2rem;
-      margin-top: 1.2rem;
     }
     .transport,
     .travel,
@@ -78,6 +64,21 @@
         @include sm-screens-third-titles;
         color: $white;
         font-size: 1.2rem;
+      }
+    }
+    .reserve {
+      background-color: $orange;
+      margin-bottom: 1rem;
+      &:hover {
+        color: $yellow;
+      }
+    }
+    .cancel {
+      background-color: $orange;
+      margin-bottom: 1rem;
+      &:hover {
+        background-color: $red;
+        color: $yellow;
       }
     }
     .getters {
