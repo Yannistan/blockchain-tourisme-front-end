@@ -1,17 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import { Link } from "react-router-dom";
 
 import { useWindowWidth } from "@react-hook/window-size";
 
-import { IsLoggedInContext } from "../context/IsLoggedInContext";
-
 import PlaneIcon from "../images/airplane_wh.png";
 
 const Header = () => {
-  const { isLoggedIn } = useContext(IsLoggedInContext);
-  console.log("isLoggedIn", isLoggedIn);
-
   const onlyWidth = useWindowWidth();
 
   return (

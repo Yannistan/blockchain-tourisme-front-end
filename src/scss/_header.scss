@@ -6,6 +6,7 @@ header {
   align-items: center;
   white-space: nowrap;
   .logo a {
+    @include sm-screens-secondary-titles;
     font-family: $logoFont;
     font-size: 3rem;
     margin-left: 1.5rem;
@@ -14,6 +15,7 @@ header {
     }
   }
   .logoIcon {
+    @include sm-screens-small-width;
     width: 3rem;
     margin: 0 0 0.3rem 1rem;
     filter: invert(1);
@@ -45,6 +47,7 @@ nav {
 }
 
 .menu a {
+  @include sm-screens-third-titles;
   font-size: 1rem;
   display: block;
 }
