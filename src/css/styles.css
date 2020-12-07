@@ -470,29 +470,11 @@ nav a:hover:nth-child(2) {
   font-size: 1.5rem;
 }
 
-.reservation .form .reserve {
-  background-color: #dd7104;
-}
-
-.reservation .form .reserve:hover {
-  color: #fffd82;
-}
-
-.reservation .form .cancel {
-  background-color: #dd7104;
-}
-
-.reservation .form .cancel:hover {
-  background-color: #ed217c;
-  color: #fffd82;
-}
-
 .reservation .form legend {
   color: #f4fffd;
   font-size: 1rem;
   font-style: italic;
   margin-bottom: 1.2rem;
-  margin-top: 1.2rem;
 }
 
 .reservation .form .transport,
@@ -536,6 +518,25 @@ nav a:hover:nth-child(2) {
   .reservation .form .tours label {
     font-size: 1rem;
   }
+}
+
+.reservation .form .reserve {
+  background-color: #dd7104;
+  margin-bottom: 1rem;
+}
+
+.reservation .form .reserve:hover {
+  color: #fffd82;
+}
+
+.reservation .form .cancel {
+  background-color: #dd7104;
+  margin-bottom: 1rem;
+}
+
+.reservation .form .cancel:hover {
+  background-color: #ed217c;
+  color: #fffd82;
 }
 
 .reservation .form .getters {

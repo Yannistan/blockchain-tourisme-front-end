@@ -89,26 +89,7 @@ const Reservation = () => {
                   First, please select a <Link to="/travels">destination</Link>
                 </p>
               )}
-              {destination !== undefined && !reserved && (
-                <button
-                  type="button"
-                  title="Send reservation to contract"
-                  onClick={handleOnClickSaveOffer}
-                  className="reserve"
-                >
-                  Reserve
-                </button>
-              )}
-              {reserved && (
-                <button
-                  type="button"
-                  title="Cancel your reservation"
-                  onClick={refreshPage}
-                  className="cancel"
-                >
-                  Cancel reservation
-                </button>
-              )}
+
               {destination !== undefined && (
                 <legend>Please select options :</legend>
               )}
@@ -177,6 +158,26 @@ const Reservation = () => {
                 />
                 <label htmlFor="tours">Tours</label>
               </div>
+              {destination !== undefined && !reserved && (
+                <button
+                  type="button"
+                  title="Send reservation to contract"
+                  onClick={handleOnClickSaveOffer}
+                  className="reserve"
+                >
+                  Reserve
+                </button>
+              )}
+              {reserved && (
+                <button
+                  type="button"
+                  title="Cancel your reservation"
+                  onClick={refreshPage}
+                  className="cancel"
+                >
+                  Cancel reservation
+                </button>
+              )}
               <div className="getters">
                 <button
                   disabled={destination === undefined}
