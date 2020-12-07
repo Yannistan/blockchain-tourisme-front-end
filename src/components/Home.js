@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 //import { ethers } from 'ethers'
 
 import Welcome from "./Welcome";
@@ -12,7 +12,7 @@ import { TourismeContext } from "../App";
 import GreenDot from "../images/green_dot.gif";
 import RedDot from "../images/red_dot.png";
 
-const Home = ({ name, email }) => {
+const Home = () => {
   const [web3State, login] = useContext(Web3Context);
   const Tourisme = useContext(TourismeContext);
   const [register, setRegister] = useState(false);
@@ -21,7 +21,7 @@ const Home = ({ name, email }) => {
 
   const handleIsRegistered = async () => {
     const res = await Tourisme.isRegistered(address);
-    setRegister(res.toString());
+    setRegister(res);
     setAddressProvided(true);
   };
 
@@ -78,8 +78,8 @@ const Home = ({ name, email }) => {
           </div>
         </div>
       )}
-      {addressProvided && register && <Welcome />}
-      {addressProvided && !register && <Register />}
+      {addressProvided && register ? <Welcome /> : ""}
+      {addressProvided && !register ? <Register /> : ""}
       <Web3Info />
     </>
   );
