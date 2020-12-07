@@ -1,4 +1,4 @@
-export const Tourisme_address = "0x652B71d9DCA06FE319153d1472Cb27a25eFa9B10";
+export const Tourisme_address = "0xc67F900526188DD50b589DbFcfE703D1F4C98695";
 //export const Tourisme_address = "0xc5b5181f9F9066bb7BC1611B95615AB797E91f69";
 
 export const Tourisme_abi = [
@@ -44,18 +44,13 @@ export const Tourisme_abi = [
     "outputs": [
       {
         "internalType": "string",
-        "name": "email",
+        "name": "name",
         "type": "string"
       },
       {
         "internalType": "string",
-        "name": "password",
+        "name": "email",
         "type": "string"
-      },
-      {
-        "internalType": "bool",
-        "name": "isClient",
-        "type": "bool"
       },
       {
         "internalType": "uint256",
@@ -148,12 +143,12 @@ export const Tourisme_abi = [
     "inputs": [
       {
         "internalType": "string",
-        "name": "_email",
+        "name": "_name",
         "type": "string"
       },
       {
         "internalType": "string",
-        "name": "_password",
+        "name": "_email",
         "type": "string"
       }
     ],
@@ -163,13 +158,19 @@ export const Tourisme_abi = [
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "confirmRegister",
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+      }
+    ],
+    "name": "isRegistered",
     "outputs": [
       {
-        "internalType": "uint256",
+        "internalType": "bool",
         "name": "",
-        "type": "uint256"
+        "type": "bool"
       }
     ],
     "stateMutability": "view",
@@ -193,31 +194,6 @@ export const Tourisme_abi = [
   {
     "inputs": [
       {
-        "internalType": "string",
-        "name": "_email",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "_password",
-        "type": "string"
-      }
-    ],
-    "name": "login",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
         "internalType": "address",
         "name": "_addr",
         "type": "address"
@@ -229,18 +205,13 @@ export const Tourisme_abi = [
         "components": [
           {
             "internalType": "string",
-            "name": "email",
+            "name": "name",
             "type": "string"
           },
           {
             "internalType": "string",
-            "name": "password",
+            "name": "email",
             "type": "string"
-          },
-          {
-            "internalType": "bool",
-            "name": "isClient",
-            "type": "bool"
           },
           {
             "internalType": "uint256",
