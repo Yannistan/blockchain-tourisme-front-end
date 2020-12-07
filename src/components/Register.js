@@ -7,7 +7,7 @@ const Register = () => {
   const [name, setName] = useState("");
 
   const handleRegister = async () => {
-    await Tourisme.register(email, name);
+    await Tourisme.register(name, email);
   };
 
   return (

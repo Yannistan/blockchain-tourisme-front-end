@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 //import { ethers } from 'ethers'
+import { Text, Button, HStack, Input } from "@chakra-ui/core";
 import Register from "./Register";
 import Welcome from "./Welcome";
 
@@ -18,11 +19,11 @@ const Home = ({ name, email }) => {
   const [address, setAddress] = useState("0x0");
 
   const handleIsRegistered = async () => {
-    const res = await Tourisme.IsRegistered(address);
+    const res = await Tourisme.isRegistered(address);
     setRegister(res.toString());
   };
 
-  console.info("Registered ? ", register);
+  // console.info("Registered ? ", register);
 
   return (
     <>
@@ -59,7 +60,10 @@ const Home = ({ name, email }) => {
                 placeholder="0x0"
                 id="address"
                 name="address"
-                onChange={(e) => setAddress(e.target.value)}
+                value={address}
+                onChange={(e) => {
+                  setAddress(e.currentTarget.value);
+                }}
                 required
               ></input>
             </div>
