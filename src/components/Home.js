@@ -26,9 +26,6 @@ const Home = () => {
 
   return (
     <>
-      <button onClick={isRegistered}>CHECK if registered</button>
-      <p>{register}</p>
-
       {web3State.is_logged ? (
         <span className="web3on">
           <img className="greenDot" alt="web3 connected" src={GreenDot}></img>
@@ -49,7 +46,27 @@ const Home = () => {
           </span>
         </>
       )}
-      {register ? <Welcome /> : <Register />}
+      <div className="formAddress ">
+        <h2>Hello.</h2>
+        <div className="row">
+          <form>
+            <div className="col-12">
+              <label ghtmlFor="address">Please enter your address :</label>
+            </div>
+            <div className="col-12">
+              <input
+                type="text"
+                placeholder="0x0..."
+                id="address"
+                name="address"
+                required
+              ></input>
+            </div>
+            <button type="submit">Go</button>
+          </form>
+        </div>
+      </div>
+      {/*{!register ? <Welcome /> : <Register />}*/}
       <Web3Info />
     </>
   );

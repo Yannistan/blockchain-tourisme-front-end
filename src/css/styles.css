@@ -21,7 +21,7 @@ header .logo a {
 
 @media screen and (max-width: 640px) {
   header .logo a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -74,7 +74,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .menu a {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -91,7 +91,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .connectWeb3P {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -107,7 +107,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .connectWeb3P .connectWeb3Btn {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -142,6 +142,74 @@ nav a:hover:nth-child(2) {
   width: 1rem;
 }
 
+.formAddress {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: "Work Sans", sans-serif;
+  margin: 3rem 3rem 3rem 3rem;
+  padding: 1rem;
+  color: #2d3047;
+  text-align: center;
+}
+
+.formAddress h2 {
+  font-size: 3.5rem;
+}
+
+@media screen and (max-width: 640px) {
+  .formAddress h2 {
+    font-size: 3rem;
+  }
+}
+
+.formAddress label {
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 640px) {
+  .formAddress label {
+    font-size: 1rem;
+  }
+}
+
+.formAddress input {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #f4fffd;
+  text-align: center;
+  display: block;
+  width: 60%;
+  height: 2.5rem;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 640px) {
+  .formAddress input {
+    font-size: 1rem;
+  }
+}
+
+.formAddress button {
+  width: 20%;
+  padding: 0.5rem;
+  border: none;
+  color: #f4fffd;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 3px;
+  background-color: #2d3047;
+  margin-top: 1.5rem;
+}
+
+.formAddress button:hover {
+  background-color: #ed217c;
+  color: #fffd82;
+}
+
 .footer {
   position: absolute;
   display: -webkit-box;
@@ -165,7 +233,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .footer {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -181,6 +249,12 @@ nav a:hover:nth-child(2) {
   background-color: #2d3047;
   display: inline-block;
   padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
+@media screen and (max-width: 640px) {
+  .travel .title {
+    font-size: 1.5rem;
+  }
 }
 
 .travel .secondaryTitle {
@@ -324,7 +398,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .reservation .head h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -341,7 +415,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .reservation .form p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -431,7 +505,7 @@ nav a:hover:nth-child(2) {
   .reservation .form .catering label,
   .reservation .form .activities label,
   .reservation .form .tours label {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -461,7 +535,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .reservation .form .id {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -482,7 +556,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .reservation .form .total {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -602,7 +676,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .register .head .registerTitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -614,7 +688,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .register .form {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -626,7 +700,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .register .form legend {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -651,7 +725,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .register .form button {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -660,7 +734,7 @@ nav a:hover:nth-child(2) {
 }
 
 .introText {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
   font-family: "Work Sans", sans-serif;
   margin: 3rem 3rem 3rem 3rem;
   padding: 1rem;
@@ -680,7 +754,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .introText h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 
@@ -691,7 +765,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .introText p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -727,7 +801,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .introText .links a {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
