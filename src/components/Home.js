@@ -1,8 +1,8 @@
 import React, { useState, useContext, useEffect } from "react";
 //import { ethers } from 'ethers'
-import { Text, Button, HStack, Input } from "@chakra-ui/core";
-import Register from "./Register";
+
 import Welcome from "./Welcome";
+import Register from "./Register";
 
 import Web3Info from "./Web3Info";
 
@@ -17,13 +17,16 @@ const Home = ({ name, email }) => {
   const Tourisme = useContext(TourismeContext);
   const [register, setRegister] = useState(false);
   const [address, setAddress] = useState("0x0");
+  const [addressProvided, setAddressProvided] = useState(false);
 
   const handleIsRegistered = async () => {
     const res = await Tourisme.isRegistered(address);
     setRegister(res.toString());
+    setAddressProvided(true);
   };
 
-  // console.info("Registered ? ", register);
+  console.info("Registered ? ", register);
+  console.info("Address provided ?", addressProvided);
 
   return (
     <>
@@ -47,33 +50,36 @@ const Home = ({ name, email }) => {
           </span>
         </>
       )}
-      <div className="formAddress ">
-        <h2>Hello.</h2>
-        <div className="row">
-          <form>
-            <div className="col-12">
-              <label ghtmlFor="address">Please enter your address :</label>
-            </div>
-            <div className="col-12">
-              <input
-                type="text"
-                placeholder="0x0"
-                id="address"
-                name="address"
-                value={address}
-                onChange={(e) => {
-                  setAddress(e.currentTarget.value);
-                }}
-                required
-              ></input>
-            </div>
-            <button type="button" onClick={handleIsRegistered}>
-              Go
-            </button>
-          </form>
+      {!addressProvided && (
+        <div className="formAddress ">
+          <h2>Hello.</h2>
+          <div className="row">
+            <form>
+              <div className="col-12">
+                <label htmlFor="address">Please enter your address :</label>
+              </div>
+              <div className="col-12">
+                <input
+                  type="text"
+                  placeholder="0x0"
+                  id="address"
+                  name="address"
+                  value={address}
+                  onChange={(e) => {
+                    setAddress(e.currentTarget.value);
+                  }}
+                  required
+                ></input>
+              </div>
+              <button type="button" onClick={handleIsRegistered}>
+                Go
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
-      {/*{!register ? <Welcome /> : <Register />}*/}
+      )}
+      {addressProvided && register && <Welcome />}
+      {addressProvided && !register && <Register />}
       <Web3Info />
     </>
   );
