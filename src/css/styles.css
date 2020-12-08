@@ -771,13 +771,6 @@ nav a:hover:nth-child(2) {
   color: #2d3047;
 }
 
-@media screen and (max-width: 640px) {
-  .introText {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-}
-
 .introText h2 {
   font-size: 3.5rem;
 }
@@ -855,6 +848,7 @@ nav a:hover:nth-child(2) {
 
 .introText .getTokens {
   text-align: center;
+  margin: 2rem 0 2rem 0;
 }
 
 .introText .getTokens label {
@@ -909,7 +903,6 @@ nav a:hover:nth-child(2) {
 }
 
 .introText .getTokens button {
-  width: 20%;
   padding: 0.5rem;
   border: none;
   color: #f4fffd;
@@ -917,6 +910,12 @@ nav a:hover:nth-child(2) {
   font-weight: bold;
   border-radius: 3px;
   background-color: #2d3047;
+}
+
+@media screen and (max-width: 640px) {
+  .introText .getTokens button {
+    font-size: 1rem;
+  }
 }
 
 .introText .getTokens button:hover {

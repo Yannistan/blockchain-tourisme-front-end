@@ -1,5 +1,4 @@
 .introText {
-  @include sm-screens-small-margins;
   background-color: $transparentWhite;
   font-family: $mainFont;
   margin: 3rem 3rem 10rem 3rem;
@@ -45,6 +44,7 @@
   }
   .getTokens {
     text-align: center;
+    margin: 2rem 0 2rem 0;
     label {
       margin-bottom: 1rem;
     }
@@ -67,7 +67,7 @@
       }
     }
     button {
-      width: 20%;
+      @include sm-screens-third-titles;
       padding: 0.5rem;
       border: none;
       color: $white;
