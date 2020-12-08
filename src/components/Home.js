@@ -80,11 +80,7 @@ const Home = () => {
         </div>
       )} 
       */}
-      <Welcome />
-      {/* 
-      {addressProvided && register ? <Welcome /> : ""}
-      {addressProvided && !register ? <Register /> : ""} 
-      */}
+      {!register ? <Welcome /> : <Register />}
       <Web3Info />
     </>
   );
