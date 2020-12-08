@@ -9,6 +9,7 @@ const Welcome = () => {
   const TourToken = useContext(TourTokenContext);
   const [amount, setAmount] = useState(0);
   const [addrClient, setAddrClient] = useState("0x0");
+  const [getTokens, setGetTokens] = useState(false);
 
   const handleGetFreeTokens = async () => {
     await TourToken.mint(addrClient, amount);
@@ -24,25 +25,34 @@ const Welcome = () => {
           </div>
           <div className="col-lg-6 links">
             <Link to="/travels">Destinations</Link>
-            <Link to="/balance">Your balance</Link>
+            <button onClick={() => setGetTokens(!getTokens)}>Get tokens</button>
+          </div>
+          <div className="getTokens">
+            {getTokens && (
+              <>
+                <hr />
+                <form>
+                  <label>Client Address :</label>
+                  <input
+                    value={addrClient}
+                    onChange={(e) => {
+                      setAddrClient(e.currentTarget.value);
+                    }}
+                  />
+                  <label>Amount in token :</label>
+                  <input
+                    value={amount}
+                    onChange={(e) => {
+                      setAmount(e.currentTarget.value);
+                    }}
+                  />
+                  <button onClick={handleGetFreeTokens}>Get Tokens</button>
+                </form>
+              </>
+            )}
           </div>
         </div>
       </div>
-      <p>Client Address :</p>
-      <input
-        value={addrClient}
-        onChange={(e) => {
-          setAddrClient(e.currentTarget.value);
-        }}
-      />
-      <p>Amount in token :</p>
-      <input
-        value={amount}
-        onChange={(e) => {
-          setAmount(e.currentTarget.value);
-        }}
-      />
-      <button onClick={handleGetFreeTokens}>Get Tokens</button>
     </>
   );
 };

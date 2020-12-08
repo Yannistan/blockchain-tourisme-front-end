@@ -2,7 +2,7 @@
   @include sm-screens-small-margins;
   background-color: $transparentWhite;
   font-family: $mainFont;
-  margin: 3rem 3rem 3rem 3rem;
+  margin: 3rem 3rem 10rem 3rem;
   padding: 1rem;
   color: $black;
   h2 {
@@ -18,7 +18,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    a {
+    a,
+    button {
       @include sm-screens-small-paddings;
       @include sm-screens-third-titles;
       text-decoration: none;
@@ -39,6 +40,44 @@
       }
       &:hover:nth-child(2) {
         color: $red;
+      }
+    }
+  }
+  .getTokens {
+    text-align: center;
+    label {
+      margin-bottom: 1rem;
+    }
+    input {
+      @include sm-screens-third-titles;
+      background-color: $transparentBlack;
+      color: $white;
+      text-align: center;
+      display: block;
+      width: 60%;
+      border: none;
+      height: 2.5rem;
+      margin: 0 auto 1.5rem auto;
+      font-size: 2rem;
+      font-weight: 500;
+      &::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $white;
+        opacity: 0.6; /* Firefox */
+      }
+    }
+    button {
+      width: 20%;
+      padding: 0.5rem;
+      border: none;
+      color: $white;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 3px;
+      background-color: $black;
+      &:hover {
+        background-color: $red;
+        color: $yellow;
       }
     }
   }

@@ -50,6 +50,7 @@ const Home = () => {
           </span>
         </>
       )}
+      {/*     
       {!addressProvided && (
         <div className="formAddress ">
           <h2>Hello.</h2>
@@ -77,9 +78,13 @@ const Home = () => {
             </form>
           </div>
         </div>
-      )}
+      )} 
+      */}
+      <Welcome />
+      {/* 
       {addressProvided && register ? <Welcome /> : ""}
-      {addressProvided && !register ? <Register /> : ""}
+      {addressProvided && !register ? <Register /> : ""} 
+      */}
       <Web3Info />
     </>
   );
