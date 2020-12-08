@@ -1,4 +1,4 @@
-export const Tourisme_address = "0x652B71d9DCA06FE319153d1472Cb27a25eFa9B10";
+export const TourToken_address = "0x652B71d9DCA06FE319153d1472Cb27a25eFa9B10";
 
 export const TourToken_abi = [
     {
