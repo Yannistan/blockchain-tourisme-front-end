@@ -18,9 +18,10 @@
     display: none;
   }
   .web3info {
+    @include sm-screens-small-margins;
     color: $white;
     background-color: $transparentBlack;
-    padding: 2rem;
+    padding: 1rem;
     margin: 3rem 0 2rem 3rem;
     font-size: 12px;
     div {
@@ -39,6 +40,9 @@
         padding: 0 3px 0 3px;
         font-size: 1rem;
       }
+    }
+    ul {
+      padding-left: 1rem;
     }
   }
 }
