@@ -498,3 +498,11 @@ const Home = () => {
 };
 
 export default Home;
+
+
+/* handleIsRegistered old version 09-12 */
+const handleIsRegistered = async () => {
+    const res = await Tourisme.isRegistered(address);
+    setRegister(res);
+    setAddressProvided(true);
+  };

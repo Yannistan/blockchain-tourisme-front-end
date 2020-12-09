@@ -9,10 +9,10 @@ const Welcome = () => {
   const Tourisme = useContext(TourismeContext);
   const TourToken = useContext(TourTokenContext);
   const [amount, setAmount] = useState(0);
-  const [addrClient, setAddrClient] = useState('0x0');
+  const [addrAgence, setAddrAgence] = useState('0x0');
 
   const handleGetFreeTokens = async () => {
-     await TourToken.mint(addrClient, amount);
+     await TourToken.mint(addrAgence, amount);
     
   };
 
@@ -33,9 +33,9 @@ const Welcome = () => {
       </div>
       <Text>Client Address :</Text>
             <Input
-              value={addrClient}
+              value={addrAgence}
               onChange={(e) => {
-                setAddrClient(e.currentTarget.value)
+                setAddrAgence(e.currentTarget.value)
               }}
             />
             <Text>Amount in token :</Text>
