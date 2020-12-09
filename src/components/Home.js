@@ -25,7 +25,7 @@ const Home = () => {
       setRegister(res);
       console.log("Is registered ?", register);
     };
-    // handleIsRegistered();
+    //handleIsRegistered();
   }, [Tourisme, web3State.account, register]);
 
   return (
@@ -83,8 +83,7 @@ const Home = () => {
         </div>
       )} 
       */}
-
-      {web3State.is_logged ? register ? <Welcome /> : <Register /> : ""}
+      {!register ? <Welcome /> : <Register />}
     </>
   );
 };
