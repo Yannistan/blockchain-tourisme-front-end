@@ -619,7 +619,7 @@ nav a:hover:nth-child(2) {
 }
 
 .web3container .showInfoBtn {
-  margin: 0.5rem 0 10rem 3rem;
+  margin: 0.5rem 0 2rem 3rem;
   padding: 0.5rem;
   background: #2d3047;
   border: none;
@@ -641,8 +641,7 @@ nav a:hover:nth-child(2) {
   color: #f4fffd;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 2rem;
-  margin-left: 3rem;
-  margin-bottom: 10rem;
+  margin: 3rem 0 2rem 3rem;
   font-size: 12px;
 }
 

@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Web3Context } from "../hooks/useWeb3";
 
 import { TourismeContext } from "../App";
 import { TourTokenContext } from "../App";

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 //import { ethers } from 'ethers'
 
 import Welcome from "./Welcome";
@@ -17,24 +17,28 @@ const Home = () => {
   const Tourisme = useContext(TourismeContext);
   const [register, setRegister] = useState(false);
   const [address, setAddress] = useState("0x0");
-  const [addressProvided, setAddressProvided] = useState(false);
 
-  const handleIsRegistered = async () => {
-    const res = await Tourisme.isRegistered(address);
-    setRegister(res);
-    setAddressProvided(true);
-  };
+  console.info("Address : ", web3State.account);
 
-  console.info("Registered ? ", register);
-  console.info("Address provided ?", addressProvided);
+  useEffect(() => {
+    const handleIsRegistered = async () => {
+      const res = await Tourisme.isRegistered(address);
+      setRegister(res);
+      console.log("Is registered ?", register);
+    };
+    // handleIsRegistered();
+  }, [Tourisme, address, register]);
 
   return (
     <>
       {web3State.is_logged ? (
-        <span className="web3on">
-          <img className="greenDot" alt="web3 connected" src={GreenDot}></img>
-          Web 3 connected
-        </span>
+        <>
+          <span className="web3on">
+            <img className="greenDot" alt="web3 connected" src={GreenDot}></img>
+            Web 3 connected
+          </span>
+          <Web3Info />
+        </>
       ) : (
         <>
           <p className="connectWeb3P">
@@ -80,8 +84,8 @@ const Home = () => {
         </div>
       )} 
       */}
-      {!register ? <Welcome /> : <Register />}
-      <Web3Info />
+
+      {web3State.is_logged ? register ? <Welcome /> : <Register /> : ""}
     </>
   );
 };
