@@ -2,20 +2,19 @@ import React, { useContext, useState } from "react";
 import { Web3Context } from "../hooks/useWeb3";
 
 import { TourismeContext } from "../App";
-import {TourTokenContext} from "../App";
-import { Text, Button, HStack, Input } from '@chakra-ui/core';
+import { TourTokenContext } from "../App";
 import { Link } from "react-router-dom";
 
 const Welcome = () => {
   const Tourisme = useContext(TourismeContext);
   const TourToken = useContext(TourTokenContext);
-  const [getTokens, setGetTokens] = useState(0);
+ // const [getTokens, setGetTokens] = useState(0);
   const [amount, setAmount] = useState(0);
-  const [addrAgence, setAddrAgence] = useState('0x0');
+  const [addrClient, setAddrClient] = useState("0x0");
+  const [getTokens, setGetTokens] = useState(false);
 
   const handleGetFreeTokens = async () => {
-     await TourToken.mint(addrClient, amount);
-    
+    await TourToken.mint(addrClient, amount);
   };
 
   return (
@@ -56,7 +55,6 @@ const Welcome = () => {
           </div>
         </div>
       </div>
- 
     </>
   );
 };
