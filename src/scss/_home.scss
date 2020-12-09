@@ -1,5 +1,6 @@
 .connectWeb3P {
   @include sm-screens-third-titles;
+  @include sm-screens-small-margins;
   margin: 3rem 3rem 0 3rem;
   color: $white;
   border: 1px solid $white;
@@ -24,6 +25,7 @@
 }
 
 .web3on {
+  @include sm-screens-small-margins;
   color: $green;
   text-shadow: 0 1px 5px black;
   font-weight: bold;
@@ -36,6 +38,7 @@
 }
 
 .web3off {
+  @include sm-screens-small-margins;
   color: $red;
   font-weight: bold;
   font-style: italic;

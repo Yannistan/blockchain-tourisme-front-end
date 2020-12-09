@@ -18,8 +18,8 @@
 
 @mixin sm-screens-small-margins {
   @media screen and (max-width: 640px) {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 

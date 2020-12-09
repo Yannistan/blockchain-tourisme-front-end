@@ -16,25 +16,28 @@ const Home = () => {
   const [web3State, login] = useContext(Web3Context);
   const Tourisme = useContext(TourismeContext);
   const [register, setRegister] = useState(false);
-  const [address, setAddress] = useState("0x0");
-  const [addressProvided, setAddressProvided] = useState(false);
 
-  const handleIsRegistered = async () => {
-    const res = await Tourisme.isRegistered(address);
-    setRegister(res);
-    setAddressProvided(true);
-  };
+  console.info("Address : ", web3State.account);
 
-  console.info("Registered ? ", register);
-  console.info("Address provided ?", addressProvided);
+  useEffect(() => {
+    const handleIsRegistered = async () => {
+      const res = await Tourisme.isRegistered(web3State.account);
+      setRegister(res);
+      console.log("Is registered ?", register);
+    };
+    //handleIsRegistered();
+  }, [Tourisme, web3State.account, register]);
 
   return (
     <>
       {web3State.is_logged ? (
-        <span className="web3on">
-          <img className="greenDot" alt="web3 connected" src={GreenDot}></img>
-          Web 3 connected
-        </span>
+        <>
+          <span className="web3on">
+            <img className="greenDot" alt="web3 connected" src={GreenDot}></img>
+            Web 3 connected
+          </span>
+          <Web3Info />
+        </>
       ) : (
         <>
           <p className="connectWeb3P">
@@ -50,6 +53,7 @@ const Home = () => {
           </span>
         </>
       )}
+      {/*     
       {!addressProvided && (
         <div className="formAddress ">
           <h2>Hello.</h2>
@@ -77,10 +81,9 @@ const Home = () => {
             </form>
           </div>
         </div>
-      )}
-      {addressProvided && register && <Welcome />}
-      {addressProvided && !register && <Register />}
-      <Web3Info />
+      )} 
+      */}
+      {!register ? <Welcome /> : <Register />}
     </>
   );
 };
