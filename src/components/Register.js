@@ -5,9 +5,11 @@ const Register = () => {
   const Tourisme = useContext(TourismeContext);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleRegister = async () => {
     await Tourisme.register(name, email);
+    setLoading(true);
   };
 
   return (
@@ -47,6 +49,16 @@ const Register = () => {
             <button type="button" onClick={handleRegister}>
               Register
             </button>
+            {loading && (
+              <div className="loader">
+                <p>
+                  Please wait ...
+                  <br />
+                  We are sending transaction ...
+                </p>
+                <div id="loader"></div>
+              </div>
+            )}
           </form>
         </div>
       </div>
