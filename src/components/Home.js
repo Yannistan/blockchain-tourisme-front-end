@@ -17,6 +17,8 @@ const Home = () => {
   const Tourisme = useContext(TourismeContext);
   const [register, setRegister] = useState(false);
 
+  console.info("Address : ", web3State.account);
+
   useEffect(() => {
     const isConnected = async () => {
       const account = await Tourisme.isRegistered(web3State.account);

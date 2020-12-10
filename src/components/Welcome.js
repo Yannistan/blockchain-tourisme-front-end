@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Web3Context } from "../hooks/useWeb3";
-
+import { ethers } from "ethers";
 import { TourismeContext } from "../App";
 import { TourTokenContext } from "../App";
 import { Link } from "react-router-dom";
@@ -8,10 +8,12 @@ import { Link } from "react-router-dom";
 const Welcome = () => {
   const Tourisme = useContext(TourismeContext);
   const TourToken = useContext(TourTokenContext);
+ 
   const [amount, setAmount] = useState(0);
   const [addrClient, setAddrClient] = useState("0x0");
   const [getTokens, setGetTokens] = useState(false);
-
+  
+  //const nbTokens = ethers.utils.parseEther(amount);
   const handleGetFreeTokens = async () => {
     await TourToken.mint(addrClient, amount);
   };
