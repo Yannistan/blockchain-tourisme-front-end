@@ -1,6 +1,6 @@
 header {
   padding: 0.5rem 0 0.4rem 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,19 +86,12 @@ nav a:hover:nth-child(2) {
   font-family: "Work Sans", sans-serif;
   display: inline-block;
   padding: 0.5rem 1rem 0.5rem 1rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 @media screen and (max-width: 640px) {
   .connectWeb3P {
     font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .connectWeb3P {
-    margin-left: 1rem;
-    margin-right: 1rem;
   }
 }
 
@@ -129,13 +122,6 @@ nav a:hover:nth-child(2) {
   font-style: italic;
   margin: 3rem 0 0 3rem;
   display: inline-block;
-}
-
-@media screen and (max-width: 640px) {
-  .web3on {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
 }
 
 .web3on .greenDot {
@@ -196,7 +182,7 @@ nav a:hover:nth-child(2) {
 }
 
 .formAddress input {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #f4fffd;
   text-align: center;
   display: block;
@@ -322,7 +308,7 @@ nav a:hover:nth-child(2) {
   bottom: 0;
   right: 0;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem;
   border-radius: 10px;
   font-weight: bold;
@@ -431,13 +417,6 @@ nav a:hover:nth-child(2) {
   font-family: "Work Sans", sans-serif;
 }
 
-@media screen and (max-width: 640px) {
-  .reservation {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-}
-
 .reservation .head {
   background-color: #2d3047;
   padding: 1rem;
@@ -461,7 +440,7 @@ nav a:hover:nth-child(2) {
 
 .reservation .form {
   color: #2d3047;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem;
 }
 
@@ -647,7 +626,7 @@ nav a:hover:nth-child(2) {
 }
 
 .web3container .showInfoBtn {
-  margin: 0.5rem 0 2rem 3rem;
+  margin: 0.5rem 0 10rem 3rem;
   padding: 0.5rem;
   background: #2d3047;
   border: none;
@@ -667,17 +646,10 @@ nav a:hover:nth-child(2) {
 
 .web3container .web3info {
   color: #f4fffd;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem;
-  margin: 3rem 0 2rem 3rem;
+  margin: 3rem 0 10rem 3rem;
   font-size: 12px;
-}
-
-@media screen and (max-width: 640px) {
-  .web3container .web3info {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
 }
 
 .web3container .web3info div {
@@ -709,16 +681,9 @@ nav a:hover:nth-child(2) {
 }
 
 .register {
-  margin: 2rem 2rem 2rem 2rem;
+  margin: 2rem 2rem 0 2rem;
   color: #f4fffd;
   font-family: "Work Sans", sans-serif;
-}
-
-@media screen and (max-width: 640px) {
-  .register {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
 }
 
 .register .head {
@@ -750,8 +715,9 @@ nav a:hover:nth-child(2) {
 
 .register .form {
   color: #2d3047;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem;
+  margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 640px) {
@@ -804,7 +770,7 @@ nav a:hover:nth-child(2) {
 .introText {
   background-color: rgba(255, 255, 255, 0.7);
   font-family: "Work Sans", sans-serif;
-  margin: 3rem 3rem 10rem 3rem;
+  margin: 2rem 3rem 2rem 3rem;
   padding: 1rem;
   color: #2d3047;
 }
@@ -815,7 +781,7 @@ nav a:hover:nth-child(2) {
 
 @media screen and (max-width: 640px) {
   .introText h2 {
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -894,7 +860,7 @@ nav a:hover:nth-child(2) {
 }
 
 .introText .getTokens input {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #f4fffd;
   text-align: center;
   display: block;
@@ -961,6 +927,81 @@ nav a:hover:nth-child(2) {
   color: #fffd82;
 }
 
+.loader {
+  color: #f4fffd;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.loader p {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: clignoter;
+          animation-name: clignoter;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transition: none;
+  transition: none;
+}
+
+@-webkit-keyframes clignoter {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes clignoter {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#loader {
+  border: 12px solid #ed217c;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  margin: 2rem auto 2rem auto;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/* .center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+   */
 * {
   margin: 0;
   padding: 0;

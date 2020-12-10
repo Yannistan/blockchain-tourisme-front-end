@@ -1,7 +1,7 @@
 .web3container {
   display: inline-block;
   .showInfoBtn {
-    margin: 0.5rem 0 2rem 3rem;
+    margin: 0.5rem 0 10rem 3rem;
     padding: 0.5rem;
     background: $black;
     border: none;
@@ -18,11 +18,10 @@
     display: none;
   }
   .web3info {
-    @include sm-screens-small-margins;
     color: $white;
     background-color: $transparentBlack;
     padding: 1rem;
-    margin: 3rem 0 2rem 3rem;
+    margin: 3rem 0 10rem 3rem;
     font-size: 12px;
     div {
       display: flex;

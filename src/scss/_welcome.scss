@@ -1,11 +1,11 @@
 .introText {
   background-color: $transparentWhite;
   font-family: $mainFont;
-  margin: 3rem 3rem 10rem 3rem;
+  margin: 2rem 3rem 2rem 3rem;
   padding: 1rem;
   color: $black;
   h2 {
-    @include sm-screens-titles;
+    @include sm-screens-secondary-titles;
     font-size: 3.5rem;
   }
   p {

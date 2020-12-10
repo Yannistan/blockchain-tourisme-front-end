@@ -7,8 +7,9 @@
 @import "_travels";
 @import "_reservation";
 @import "_web3info";
-@import "register";
-@import "welcome";
+@import "_register";
+@import "_welcome";
+@import "_loader";
 
 * {
   margin: 0;

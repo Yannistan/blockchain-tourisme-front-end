@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-//import { ethers } from 'ethers'
+import { ethers } from "ethers";
 
 import Welcome from "./Welcome";
 import Register from "./Register";
@@ -18,15 +18,20 @@ const Home = () => {
   const [register, setRegister] = useState(false);
 
   console.info("Address : ", web3State.account);
-  
+
   useEffect(() => {
-    const handleIsRegistered = async () => {
-      const res = await Tourisme.isRegistered(web3State.account);
-      setRegister(res);
-      console.log("Is registered ?", register);
+    const isConnected = async () => {
+      const account = await Tourisme.isRegistered(web3State.account);
+      setRegister(account);
+      console.log("is Registered ?", register);
     };
-    handleIsRegistered();
-  }, [web3State.isWeb3]);
+    if (
+      web3State.account !== ethers.constants.AddressZero &&
+      Tourisme !== null
+    ) {
+      isConnected();
+    }
+  }, [Tourisme, web3State.account, register, web3State.balance]);
 
   return (
     <>
@@ -36,7 +41,6 @@ const Home = () => {
             <img className="greenDot" alt="web3 connected" src={GreenDot}></img>
             Web 3 connected
           </span>
-          <Web3Info />
         </>
       ) : (
         <>
@@ -83,7 +87,8 @@ const Home = () => {
         </div>
       )} 
       */}
-      {!register ? <Welcome /> : <Register />}
+      {register ? <Welcome /> : <Register />}
+      <Web3Info />
     </>
   );
 };
