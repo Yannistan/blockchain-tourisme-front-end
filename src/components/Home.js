@@ -18,15 +18,15 @@ const Home = () => {
   const [register, setRegister] = useState(false);
 
   console.info("Address : ", web3State.account);
-
+  
   useEffect(() => {
     const handleIsRegistered = async () => {
       const res = await Tourisme.isRegistered(web3State.account);
       setRegister(res);
       console.log("Is registered ?", register);
     };
-    //handleIsRegistered();
-  }, [Tourisme, web3State.account, register]);
+    handleIsRegistered();
+  }, [web3State.isWeb3]);
 
   return (
     <>

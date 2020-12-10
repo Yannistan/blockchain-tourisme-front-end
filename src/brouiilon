@@ -506,3 +506,19 @@ const handleIsRegistered = async () => {
     setRegister(res);
     setAddressProvided(true);
   };
+
+  /* useEffect(() => {
+    const handleIsRegistered = async () => {
+      const res = await Tourisme.isRegistered(address);
+      try {
+       
+        setRegister(res);
+      } catch (e) {
+        throw e;
+      }
+    };
+    handleIsRegistered();
+    
+  }, []);
+
+  */
