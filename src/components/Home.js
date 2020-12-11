@@ -5,7 +5,7 @@ import Welcome from "./Welcome";
 import Register from "./Register";
 
 import Web3Info from "./Web3Info";
-import GetTokens from "./GetTokens";
+import GetTokens from "./Agency";
 import { Web3Context } from "../hooks/useWeb3";
 import { TourismeContext } from "../App";
 
@@ -89,7 +89,6 @@ const Home = () => {
       */}
       {register ? <Welcome /> : <Register />}
       <Web3Info />
-    
     </>
   );
 };

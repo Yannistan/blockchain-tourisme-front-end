@@ -1,4 +1,4 @@
-.introText {
+.agency {
   background-color: $transparentWhite;
   font-family: $mainFont;
   margin: 2rem 3rem 2rem 3rem;
@@ -23,7 +23,7 @@
       @include sm-screens-third-titles;
       text-decoration: none;
       display: block;
-      width: 100%;
+      width: 50%;
       text-align: center;
       font-family: $logoFont;
       padding: 1rem;
@@ -42,7 +42,7 @@
       }
     }
   }
-  .getTokens {
+  .mintTokens {
     text-align: center;
     margin: 2rem 0 2rem 0;
     label {

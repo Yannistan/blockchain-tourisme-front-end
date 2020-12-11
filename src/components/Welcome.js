@@ -9,13 +9,13 @@ const Welcome = () => {
   const Tourisme = useContext(TourismeContext);
   const TourToken = useContext(TourTokenContext);
   const [showTokens, setShowTokens] = useState(false);
-  const [TokenNumber, setTokenNumber] = useState('0');
+  const [TokenNumber, setTokenNumber] = useState("0");
   const nbTokens = ethers.utils.parseEther(TokenNumber);
- // const [tokens, setTokens] = useState('0.0');
- const handleBuyTokens = async () => {
-  await TourToken.buyTokens(nbTokens);
-}
- 
+  // const [tokens, setTokens] = useState('0.0');
+  const handleBuyTokens = async () => {
+    await TourToken.buyTokens(nbTokens);
+  };
+
   return (
     <>
       <div className="introText">
@@ -27,21 +27,25 @@ const Welcome = () => {
           <div className="col-lg-6 links">
             <Link to="/travels">Destinations</Link>
 
-            <button onClick={() => setShowTokens(!showTokens)}>Buy tokens</button>
+            <button onClick={() => setShowTokens(!showTokens)}>
+              Buy tokens
+            </button>
           </div>
-          <div className="Tokens">
-            { showTokens && (
+          <div className="getTokens">
+            {showTokens && (
               <>
                 <hr />
                 <form>
-                <label>Number of Tokens</label>
-                 <input
+                  <label>Number of Tokens :</label>
+                  <input
                     value={TokenNumber}
                     onChange={(e) => {
                       setTokenNumber(e.currentTarget.value);
                     }}
-                  /> 
-                  <button type="button" onClick={handleBuyTokens}>Buy Tokens</button>
+                  />
+                  <button type="button" onClick={handleBuyTokens}>
+                    Buy Tokens
+                  </button>
                 </form>
               </>
             )}

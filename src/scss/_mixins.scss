@@ -16,6 +16,12 @@
   }
 }
 
+@mixin sm-screens-small-text {
+  @media screen and (max-width: 640px) {
+    font-size: 12px;
+  }
+}
+
 @mixin sm-screens-small-margins {
   @media screen and (max-width: 640px) {
     margin-left: 1rem;
