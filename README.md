@@ -16,17 +16,23 @@ _Front-end repository_
 
 #### Run `yarn` to install dependencies
 
+<hr/>
+
+#### Project architecture :
+
 ```
 src
 └── index.js
     └── <Web3Provider>
-        ├── App.js
+        ├── <App.js />
         ├── <TourismeContext.Provider>
             └── <Dapp />
                 ├── <Router>
                     ├── <DestinationContextProvider>
                         ├── <Header />
                         ├── <Home />
+                            ├── <Welcome />
+                            └── <Register />
                         ├── <Reservation />
                         └── <Travels />
                     └── </Router>
@@ -36,6 +42,3 @@ src
     └── </Web3Provider>
 
 ```
-
-├──
-└──
