@@ -13,7 +13,7 @@ const Welcome = () => {
   const nbTokens = ethers.utils.parseEther(TokenNumber);
  // const [tokens, setTokens] = useState('0.0');
  const handleBuyTokens = async () => {
-  await TourToken.buyTokens(nbTokens);
+  await Tourisme.buyTokens(ethers.utils.parseEther('100.0'));
 }
  
   return (
