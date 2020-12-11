@@ -6,7 +6,7 @@ import Home from "./components/Home";
 import Travels from "./components/Travels";
 import Reservation from "./components/Reservation";
 import Balance from "./components/Balance";
-import Agency from "./components/Agency";
+import GetTokens from "./components/GetTokens";
 
 import DestinationContextProvider from "./context/DestinationContext";
 
@@ -24,7 +24,7 @@ function Dapp() {
             <Route path="/" exact component={Home} />
             <Route path="/reservation" exact component={Reservation} />
             <Route path="/travels" exact component={Travels} />
-            <Route path="/getTokens" exact component={Agency} />
+            <Route path="/getTokens" exact component={GetTokens} />
             <Route path="/balance" exact component={Balance} />
           </Switch>
         </DestinationContextProvider>

@@ -7,7 +7,7 @@ import { TourTokenContext } from "../App";
 
 import { Web3Context } from "../hooks/useWeb3";
 
-const Agency = () => {
+const GetTokens = () => {
   const Tourisme = useContext(TourismeContext);
   const TourToken = useContext(TourTokenContext);
   const [amount, setAmount] = useState("0");
@@ -65,4 +65,4 @@ const Agency = () => {
   );
 };
 
-export default Agency;
+export default GetTokens;
