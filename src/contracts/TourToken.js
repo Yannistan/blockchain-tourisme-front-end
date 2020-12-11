@@ -1,5 +1,5 @@
-export const TourToken_address = "0x652B71d9DCA06FE319153d1472Cb27a25eFa9B10";
-
+export const TourToken_address = "0xe7c00B5094790CD0e8ea41b82Dd4129d6f9248e8";
+//0x652B71d9DCA06FE319153d1472Cb27a25eFa9B10
 export const TourToken_abi = [
     {
       "inputs": [

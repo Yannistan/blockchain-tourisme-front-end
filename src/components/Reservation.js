@@ -3,12 +3,13 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { DestinationContext } from "../context/DestinationContext";
-import { TourismeContext } from "../App";
+import { TourismeContext, TourTokenContext } from "../App";
 
 const Reservation = () => {
   const { destination } = useContext(DestinationContext);
   const [reserved, setReserved] = useState(false);
   const Tourisme = useContext(TourismeContext);
+  const TourToken = useContext(TourTokenContext);
   const [inputTransport, setInputTransport] = useState();
   const [inputAccommodation, setInputAccommodation] = useState("");
   const [inputCatering, setInputCatering] = useState("");
@@ -47,18 +48,6 @@ const Reservation = () => {
   const handleOnClickPay = async () => {
     await Tourisme.reserveByClient(ReserveID);
   };
-
-  /* const handleOnClickGetID = async () => {
-    const res = await Tourisme.choose_offer(
-      destination,
-      inputAccommodation,
-      inputTransport,
-      inputCatering,
-      inputActivities,
-      inputTours
-    );
-    setReserveID(res.toString());
-  }; */
 
   function refreshPage() {
     window.location.reload(false);

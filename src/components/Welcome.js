@@ -8,16 +8,14 @@ import { Link } from "react-router-dom";
 const Welcome = () => {
   const Tourisme = useContext(TourismeContext);
   const TourToken = useContext(TourTokenContext);
+  const [showTokens, setShowTokens] = useState(false);
+  const [TokenNumber, setTokenNumber] = useState('0');
+  const nbTokens = ethers.utils.parseEther(TokenNumber);
+ // const [tokens, setTokens] = useState('0.0');
+ const handleBuyTokens = async () => {
+  await TourToken.buyTokens(nbTokens);
+}
  
-  const [amount, setAmount] = useState(0);
-  const [addrClient, setAddrClient] = useState("0x0");
-  const [getTokens, setGetTokens] = useState(false);
-  
-  //const nbTokens = ethers.utils.parseEther(amount);
-  const handleGetFreeTokens = async () => {
-    await TourToken.mint(addrClient, amount);
-  };
-
   return (
     <>
       <div className="introText">
@@ -28,28 +26,22 @@ const Welcome = () => {
           </div>
           <div className="col-lg-6 links">
             <Link to="/travels">Destinations</Link>
-            <button onClick={() => setGetTokens(!getTokens)}>Get tokens</button>
+
+            <button onClick={() => setShowTokens(!showTokens)}>Buy tokens</button>
           </div>
-          <div className="getTokens">
-            {getTokens && (
+          <div className="Tokens">
+            { showTokens && (
               <>
                 <hr />
                 <form>
-                  <label>Client Address :</label>
-                  <input
-                    value={addrClient}
+                <label>Number of Tokens</label>
+                 <input
+                    value={TokenNumber}
                     onChange={(e) => {
-                      setAddrClient(e.currentTarget.value);
+                      setTokenNumber(e.currentTarget.value);
                     }}
-                  />
-                  <label>Amount in token :</label>
-                  <input
-                    value={amount}
-                    onChange={(e) => {
-                      setAmount(e.currentTarget.value);
-                    }}
-                  />
-                  <button onClick={handleGetFreeTokens}>Get Tokens</button>
+                  /> 
+                  <button type="button" onClick={handleBuyTokens}>Buy Tokens</button>
                 </form>
               </>
             )}
