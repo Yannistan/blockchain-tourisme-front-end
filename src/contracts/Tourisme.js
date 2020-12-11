@@ -13,6 +13,11 @@ export const Tourisme_abi = [
         "internalType": "uint256",
         "name": "_price",
         "type": "uint256"
+      },
+      {
+        "internalType": "address payable",
+        "name": "_addrAgence",
+        "type": "address"
       }
     ],
     "stateMutability": "nonpayable",
