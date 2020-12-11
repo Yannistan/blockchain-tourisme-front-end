@@ -1,4 +1,12 @@
-#### If you need to modify SCSS files please install `Live SASS Compiler` VSC extension and run `Watch SASS` to compile.
+# B×Travel
+
+## Decentralized travel agency
+
+_Front-end repository_
+
+<hr/>
+
+#### If you need to modify SCSS files please install `Live SASS Compiler` (VSC extension) and run `Watch SASS` to compile.
 
 #### Packages used :
 
@@ -7,3 +15,27 @@
 - "@react-hook/window-size": "^3.0.7",
 
 #### Run `yarn` to install dependencies
+
+```
+src
+└── index.js
+    └── <Web3Provider>
+        ├── App.js
+        ├── <TourismeContext.Provider>
+            └── <Dapp />
+                ├── <Router>
+                    ├── <DestinationContextProvider>
+                        ├── <Header />
+                        ├── <Home />
+                        ├── <Reservation />
+                        └── <Travels />
+                    └── </Router>
+                ├── </DestinationContextProvider>
+                └── </Footer>
+        └── </TourismeContext.Provider>
+    └── </Web3Provider>
+
+```
+
+├──
+└──
