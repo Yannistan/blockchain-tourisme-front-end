@@ -35,9 +35,9 @@ src
                             └── <Register />
                         ├── <Reservation />
                         └── <Travels />
-                    └── </Router>
-                ├── </DestinationContextProvider>
-                └── </Footer>
+                    ├── </DestinationContextProvider>
+                    └── </Footer>
+                └── </Router>
         └── </TourismeContext.Provider>
     └── </Web3Provider>
 
