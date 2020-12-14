@@ -5,7 +5,7 @@ import Welcome from "./Welcome";
 import Register from "./Register";
 
 import Web3Info from "./Web3Info";
-import GetTokens from "./GetTokens";
+//import GetTokens from "./GetTokens";
 import { Web3Context } from "../hooks/useWeb3";
 import { TourismeContext } from "../App";
 

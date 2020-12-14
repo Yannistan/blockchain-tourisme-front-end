@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
+import  { useContext, useState } from "react";
 import { Web3Context } from "../hooks/useWeb3";
 
 const Web3Info = () => {
-  const [web3State, login] = useContext(Web3Context);
+  const [web3State] = useContext(Web3Context);
   const [showInfo, setShowInfo] = useState(false);
 
   return (

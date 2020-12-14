@@ -3,13 +3,13 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { DestinationContext } from "../context/DestinationContext";
-import { TourismeContext, TourTokenContext } from "../App";
+import { TourismeContext } from "../App";
 
 const Reservation = () => {
   const { destination } = useContext(DestinationContext);
   const [reserved, setReserved] = useState(false);
   const Tourisme = useContext(TourismeContext);
-  const TourToken = useContext(TourTokenContext);
+  //const TourToken = useContext(TourTokenContext);
   const [inputTransport, setInputTransport] = useState();
   const [inputAccommodation, setInputAccommodation] = useState("");
   const [inputCatering, setInputCatering] = useState("");
@@ -17,7 +17,7 @@ const Reservation = () => {
   const [inputTours, setInputTours] = useState("");
   const [getPrice, setGetPrice] = useState(0);
   const [ReserveID, setReserveID] = useState(0);
-  const [AddressPayment, setAddressPayment] = useState("0x0");
+ // const [AddressPayment, setAddressPayment] = useState("0x0");
 
   const handleOnClickSaveOffer = async () => {
     setReserved(true);
@@ -29,6 +29,7 @@ const Reservation = () => {
       inputActivities,
       inputTours
     );
+    console.log(res);
   };
 
   const handleOnClickGetID = async () => {

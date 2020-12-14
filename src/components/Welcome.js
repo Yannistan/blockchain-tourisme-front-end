@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
-import { Web3Context } from "../hooks/useWeb3";
+//import { Web3Context } from "../hooks/useWeb3";
 import { ethers } from "ethers";
 import { TourismeContext } from "../App";
-import { TourTokenContext } from "../App";
+//import { TourTokenContext } from "../App";
 import { Link } from "react-router-dom";
 
 const Welcome = () => {
   const Tourisme = useContext(TourismeContext);
-  const TourToken = useContext(TourTokenContext);
+  //const TourToken = useContext(TourTokenContext);
   const [showTokens, setShowTokens] = useState(false);
 
   const [TokenNumber, setTokenNumber] = useState('0');
