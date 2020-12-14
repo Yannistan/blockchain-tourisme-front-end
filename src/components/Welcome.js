@@ -10,10 +10,10 @@ const Welcome = () => {
   const TourToken = useContext(TourTokenContext);
   const [showTokens, setShowTokens] = useState(false);
   const [TokenNumber, setTokenNumber] = useState('0');
-  const nbTokens = ethers.utils.parseEther(TokenNumber);
- // const [tokens, setTokens] = useState('0.0');
- const handleBuyTokens = async () => {
-  await Tourisme.buyTokens(ethers.utils.parseEther('100.0'));
+  // const nbTokens = ethers.utils.parseEther(TokenNumber);
+  // const [tokens, setTokens] = useState('0.0');
+  const handleBuyTokens = async () => {
+  await Tourisme.buyTokens(ethers.utils.parseEther(TokenNumber.toString()));
 }
  
   return (

@@ -61,7 +61,7 @@ const Reservation = () => {
             <div className="head">
               <h2>Reservation</h2>
             </div>
-            <form className="form" onSubmit={handleOnClickPay}>
+            <form className="form" /*onSubmit={handleOnClickPay}*/>
               {destination !== undefined ? (
                 <p>
                   Your trip to <span>{destination}</span>
@@ -197,6 +197,7 @@ const Reservation = () => {
                 type="submit"
                 title="Pay reservation"
                 className="pay"
+                onClick={handleOnClickPay}
               >
                 PAY
               </button>
