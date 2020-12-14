@@ -1,9 +1,9 @@
 import { ethers } from "ethers";
-import React, { useState, useEffect, useContext } from "react";
+import  { useState, useEffect, useContext } from "react";
 import { Web3Context } from "./useWeb3";
 
 export const useContract = (address, abi) => {
-  const [web3State, _] = useContext(Web3Context);
+  const [web3State] = useContext(Web3Context);
   const [contract, setContract] = useState(null);
   useEffect(() => {
     if (web3State.signer) {
