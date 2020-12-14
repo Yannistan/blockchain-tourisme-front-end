@@ -18,6 +18,14 @@ _Front-end repository_
 
 <hr/>
 
+####    Initialisation of React Project
+
+% npx create-react-app tourisme-front-end
+
+#### Installation of ethers.js library
+
+% npm install --save ethers
+
 #### Project architecture :
 
 ```
