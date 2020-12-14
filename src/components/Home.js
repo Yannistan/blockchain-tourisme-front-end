@@ -89,7 +89,6 @@ const Home = () => {
       */}
       {register ? <Welcome /> : <Register />}
       <Web3Info />
-    
     </>
   );
 };

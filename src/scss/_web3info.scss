@@ -18,11 +18,12 @@
     display: none;
   }
   .web3info {
+    @include sm-screens-small-text;
     color: $white;
     background-color: $transparentBlack;
     padding: 1rem;
     margin: 3rem 0 10rem 3rem;
-    font-size: 12px;
+    font-size: 16px;
     div {
       display: flex;
       align-items: center;

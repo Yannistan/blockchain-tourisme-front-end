@@ -10,29 +10,31 @@ import { Web3Context } from "../hooks/useWeb3";
 const GetTokens = () => {
   const Tourisme = useContext(TourismeContext);
   const TourToken = useContext(TourTokenContext);
-
   const [amount, setAmount] = useState("0");
   const [addrAgence, setAddrAgence] = useState("0x0");
-  const [getTokens, setGetTokens] = useState(false);
+  const [mintTokens, setMintTokens] = useState(false);
 
   const nbTokens = ethers.utils.parseEther("500.0");
-  const handleGetTokens = async () => {
+
+  const handleMintTokens = async () => {
     await TourToken.mint(addrAgence, nbTokens);
   };
 
   return (
     <>
-      <div className="introText">
+      <div className="agency">
         <div className="row">
           <div className="col-lg-6">
-            <h2>Welcome</h2>
-            <p>You are registered.</p>
+            <h2>Agency</h2>
+            <p>Manage Tokens</p>
           </div>
           <div className="col-lg-6 links">
-            <button onClick={() => setGetTokens(!getTokens)}>Get tokens</button>
+            <button onClick={() => setMintTokens(!mintTokens)}>
+              Mint Tokens
+            </button>
           </div>
-          <div className="getTokens">
-            {getTokens && (
+          <div className="mintTokens">
+            {mintTokens && (
               <>
                 <hr />
                 <form>
@@ -50,8 +52,8 @@ const GetTokens = () => {
                       setAmount(e.currentTarget.value);
                     }}
                   /> */}
-                  <button type="button" onClick={handleGetTokens}>
-                    Get Tokens
+                  <button type="button" onClick={handleMintTokens}>
+                    Mint Tokens
                   </button>
                 </form>
               </>

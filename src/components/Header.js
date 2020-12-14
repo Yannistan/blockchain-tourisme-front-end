@@ -22,16 +22,16 @@ const Header = () => {
         <nav>
           {onlyWidth > 700 ? (
             <>
-              <Link to="/getTokens">GetTokens</Link>
+              <Link to="/getTokens">Agency</Link>
               <Link to="/travels">Travels</Link>
               <Link to="/reservation">Reservation</Link>
             </>
           ) : (
             <>
               <div className="menu">
-              <Link to="/getTokens">GetTokens</Link>
-              <Link to="/travels">Travels</Link>
-              <Link to="/reservation">Reservation</Link>
+                <Link to="/getTokens">Agency</Link>
+                <Link to="/travels">Travels</Link>
+                <Link to="/reservation">Reservation</Link>
               </div>
             </>
           )}
