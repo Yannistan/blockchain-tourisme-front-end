@@ -1,7 +1,8 @@
-import React from "react";
+/*import React from "react";
 
 const Balance = () => {
   return null;
 };
 
 export default Balance;
+*/
